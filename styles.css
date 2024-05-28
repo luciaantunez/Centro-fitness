@@ -158,3 +158,63 @@ header {
 .btn-solid:hover {
     background-color: rgb(23, 68, 10); /* Color de fondo más oscuro al pasar el cursor */
 }
+
+.split-section {
+    display: flex;
+    height: 100vh;
+    background-color: #000; /* Fondo negro */
+}
+
+.split {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 6rem;
+}
+
+.split.left {
+    background-image: url('img/RutinasPersonalizadas.png');
+}
+
+.split.right {
+    background-image: url('img/EntrenamientoGuiadoOnline.png');
+}
+
+.left-content {
+    text-align: right;
+    color: white;
+}
+
+.right-content {
+    text-align: left;
+    color: white;
+}
+
+.split h2 {
+    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
+    font-weight: 400; /* Asegura el uso de Inter Regular */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.split p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.btn-green-outline {
+    background-color: transparent;
+    color: #32B70D;
+    border: 2px solid #32B70D;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0rem;
+}
+
+.btn-green-outline:hover {
+    background-color: #32B70D;
+    color: white;
+}
