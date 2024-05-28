@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
+    font-weight: 400; /* Asegura el uso de Inter Regular */
+    background-color: #f4f4f4;
+    background-image: url('img/fondo.png'); /* URL de imagen de fondo */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Hacer el fondo del header semitransparente */
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 4rem; /* Aumenta el margen entre los elementos del menú */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.nav-links a:hover {
+    color: #32B70D; /* Color verde al pasar el cursor */
+}
+
+.nav-links a i {
+    margin-right: 0.5rem;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.8); /* Hacer el fondo del menú semitransparente en móvil */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        margin: 1.5rem 0; /* Aumenta el margen vertical entre los elementos en móvil */
+    }
+    .burger {
+        display: block;
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+    padding-right: 10%;
+}
+
+.landing-content {
+    text-align: right;
+    color: white;
+}
+
+.landing-content h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400; /* Asegura el uso de Bebas Neue Regular */
+    font-size: 4rem;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+}
+
+.landing-content h2 {
+    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
+    font-weight: 400; /* Asegura el uso de Inter Regular */
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+}
+
+.btn {
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
+    font-weight: 400; /* Asegura el uso de Inter Regular */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-solid {
+    background-color: #32B70D; /* Color de fondo verde */
+    color: white;
+}
+
+.btn-solid:hover {
+    background-color: rgb(23, 68, 10); /* Color de fondo más oscuro al pasar el cursor */
+}
