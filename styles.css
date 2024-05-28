@@ -108,7 +108,7 @@ header {
 }
 
 .landing-content h1 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue';
     font-weight: 400; /* Asegura el uso de Bebas Neue Regular */
     font-size: 4rem;
     margin-bottom: 0rem;
@@ -161,19 +161,23 @@ header {
 
 .split-section {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 100vh;
     background-color: #000; /* Fondo negro */
+    padding: 1rem 10%;
+    gap: 2rem; /* Espacio entre las divisiones */
 }
 
 .split {
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 2rem;
+    justify-content: center;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    margin: 6rem;
+    padding: 2rem;
 }
 
 .split.left {
@@ -195,13 +199,14 @@ header {
 }
 
 .split h2 {
-    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
-    font-weight: 400; /* Asegura el uso de Inter Regular */
-    font-size: 2rem;
+    font-family: 'Bebas Neue'; /* Usa la fuente Bebas Neue */
+    font-weight: 400; /* Asegura el uso de Bebas Neue Regular */
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .split p {
+    font-family: 'Inter', sans-serif; /* Usa la fuente Inter */
     font-size: 0.8rem;
     margin-bottom: 1rem;
 }
@@ -211,7 +216,7 @@ header {
     color: #32B70D;
     border: 2px solid #32B70D;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 0rem;
+    margin: 0;
 }
 
 .btn-green-outline:hover {
