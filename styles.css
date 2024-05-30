@@ -1,20 +1,23 @@
+/* Resetear márgenes y rellenos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos del cuerpo */
 body {
-    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
-    font-weight: 400; /* Asegura el uso de Inter Regular */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     background-color: #f4f4f4;
-    background-image: url('img/fondo.png'); /* URL de imagen de fondo */
+    background-image: url('img/fondo.png');
     background-size: cover;
     background-attachment: fixed;
 }
 
+/* Estilos del header */
 header {
-    background-color: rgba(0, 0, 0, 0.8); /* Hacer el fondo del header semitransparente */
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     position: fixed;
     width: 100%;
@@ -39,7 +42,7 @@ header {
 }
 
 .nav-links li {
-    margin-left: 4rem; /* Aumenta el margen entre los elementos del menú */
+    margin-left: 4rem;
 }
 
 .nav-links a {
@@ -48,11 +51,11 @@ header {
     font-size: 1rem;
     display: flex;
     align-items: center;
-    transition: color 0.3s ease; /* Transición suave para el hover */
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #32B70D; /* Color verde al pasar el cursor */
+    color: #32B70D;
 }
 
 .nav-links a i {
@@ -76,7 +79,7 @@ header {
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.8); /* Hacer el fondo del menú semitransparente en móvil */
+        background-color: rgba(0, 0, 0, 0.8);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -84,7 +87,7 @@ header {
         transition: transform 0.5s ease-in;
     }
     .nav-links li {
-        margin: 1.5rem 0; /* Aumenta el margen vertical entre los elementos en móvil */
+        margin: 1.5rem 0;
     }
     .burger {
         display: block;
@@ -94,6 +97,7 @@ header {
     }
 }
 
+/* Estilos de la sección de aterrizaje */
 .landing {
     display: flex;
     align-items: center;
@@ -109,15 +113,15 @@ header {
 
 .landing-content h1 {
     font-family: 'Bebas Neue';
-    font-weight: 400; /* Asegura el uso de Bebas Neue Regular */
+    font-weight: 400;
     font-size: 4rem;
     margin-bottom: 0rem;
     margin-right: 1rem;
 }
 
 .landing-content h2 {
-    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
-    font-weight: 400; /* Asegura el uso de Inter Regular */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     margin-bottom: 2rem;
     margin-right: 1rem;
@@ -128,12 +132,13 @@ header {
     justify-content: right;
 }
 
+/* Estilos de botones */
 .btn {
     border: none;
     padding: 1rem 2rem;
     margin: 0 1rem;
-    font-family: 'Inter', sans-serif; /* Usa la fuente Inter para los botones */
-    font-weight: 400; /* Asegura el uso de Inter Regular */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -151,22 +156,36 @@ header {
 }
 
 .btn-solid {
-    background-color: #32B70D; /* Color de fondo verde */
+    background-color: #32B70D;
     color: white;
 }
 
 .btn-solid:hover {
-    background-color: rgb(23, 68, 10); /* Color de fondo más oscuro al pasar el cursor */
+    background-color: rgb(23, 68, 10);
 }
 
+.btn-green-outline {
+    background-color: transparent;
+    color: #32B70D;
+    border: 2px solid #32B70D;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+}
+
+.btn-green-outline:hover {
+    background-color: #32B70D;
+    color: white;
+}
+
+/* Estilos de secciones divididas */
 .split-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    background-color: #000; /* Fondo negro */
+    background-color: #000;
     padding: 1rem 10%;
-    gap: 2rem; /* Espacio entre las divisiones */
+    gap: 2rem;
 }
 
 .split {
@@ -188,38 +207,84 @@ header {
     background-image: url('img/EntrenamientoGuiadoOnline.png');
 }
 
-.left-content {
+.text-right {
     text-align: right;
     color: white;
 }
 
-.right-content {
+.text-left {
     text-align: left;
     color: white;
 }
 
 .split h2 {
-    font-family: 'Bebas Neue'; /* Usa la fuente Bebas Neue */
-    font-weight: 400; /* Asegura el uso de Bebas Neue Regular */
+    font-family: 'Bebas Neue';
+    font-weight: 400;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .split p {
-    font-family: 'Inter', sans-serif; /* Usa la fuente Inter */
+    font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     margin-bottom: 1rem;
 }
 
-.btn-green-outline {
-    background-color: transparent;
-    color: #32B70D;
-    border: 2px solid #32B70D;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 0;
+/* Estilos para la sección ¿Por qué elegirnos? */
+.why-choose-us {
+    background-color: #0C0C0C;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
 }
 
-.btn-green-outline:hover {
-    background-color: #32B70D;
+.why-choose-us h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.why-choose-us .white-text {
     color: white;
+}
+
+.why-choose-us .green-text {
+    color: #32B70D;
+}
+
+.why-choose-us p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.benefit {
+    border: 2px solid #32B70D;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    color: #32B70D;
+    margin-bottom: 0.5rem;
+}
+
+.benefit p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
 }
