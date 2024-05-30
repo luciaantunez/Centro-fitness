@@ -19,4 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Burger Animation
         burger.classList.toggle('toggle');
     });
+    document.getElementById('asesoria-online').addEventListener('click', function() {
+        document.getElementById('asesoria-o').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('inicio').addEventListener('click', function() {
+        document.getElementById('ini').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('sobre-nosotros').addEventListener('click', function() {
+        document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' });
+    });
 });

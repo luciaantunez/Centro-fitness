@@ -286,3 +286,47 @@ h1 {
 }
 
 
+/* Estilos para la sparación */
+.separador {
+    width: 100%;                /* Ajusta el ancho*/
+}
+
+.about-us {
+    background-color: #0C0C0C;
+    color: white;
+    padding-top: 10%;
+    padding-left: 10%
+;
+}
+.conteiner {
+    display: flex;
+    height: 100vh;
+}
+
+.info, .photo {
+    flex: 1; /* Cada div ocupa el 50% del ancho del contenedor */
+    float: right;
+    padding: 20px;
+}
+
+.photo img {
+    max-width: 70%;
+    max-height: 70%;
+    
+}
+
+.about-us h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    color: #f4f9f2;
+    text-align: left;
+    padding-left: 50px;
+    
+}
+.parrafos {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 10px;
+    max-width: 85%;
+    max-height: 85%;
+}
