@@ -15,6 +15,19 @@ body {
     background-attachment: fixed;
 }
 
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.margin-custom {
+    margin-top: 0px;    /* Margen superior */
+    margin-right: 90px;  /* Margen derecho */
+    margin-bottom: 0px; /* Margen inferior */
+    margin-left: 90px;   /* Margen izquierdo */
+}
+
 /* Estilos del header */
 header {
     background-color: rgba(0, 0, 0, 0.8);
@@ -111,7 +124,7 @@ header {
     color: white;
 }
 
-.landing-content h1 {
+h1 {
     font-family: 'Bebas Neue';
     font-weight: 400;
     font-size: 4rem;
@@ -183,7 +196,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    background-color: #000;
+    background-color: #0C0C0C;
     padding: 1rem 10%;
     gap: 2rem;
 }
@@ -224,11 +237,6 @@ header {
     margin-bottom: 1rem;
 }
 
-.split p {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-}
 
 /* Estilos para la sección ¿Por qué elegirnos? */
 .why-choose-us {
@@ -252,24 +260,19 @@ header {
     color: #32B70D;
 }
 
-.why-choose-us p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
 
 .benefits {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
 }
 
 .benefit {
-    border: 2px solid #32B70D;
-    border-radius: 10px;
+    border: 1px solid #32B70D;
+    border-radius: 5px;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #0C0C0C;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,9 +285,4 @@ header {
     margin-bottom: 0.5rem;
 }
 
-.benefit p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-}
+
