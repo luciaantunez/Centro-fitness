@@ -10,9 +10,15 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     background-color: #f4f4f4;
-    background-image: url('img/fondo.png');
     background-size: cover;
     background-attachment: fixed;
+}
+
+#home {
+    background-image: url('img/fondo.png');
+}
+#gym {
+    background-image: url('img/pruebaGym.jpg');
 }
 
 p {
