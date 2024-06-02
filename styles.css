@@ -21,17 +21,77 @@ body {
     background-image: url('img/pruebaGym.jpg');
 }
 
+h1 {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    color: #f4f9f2;
+    text-align: left; 
+}
+
 p {
     font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     margin-bottom: 1rem;
 }
 
+/* Alineación de texto */
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Estilos de Márgenes */
 .margin-custom {
     margin-top: 0px;    /* Margen superior */
     margin-right: 90px;  /* Margen derecho */
     margin-bottom: 0px; /* Margen inferior */
     margin-left: 90px;   /* Margen izquierdo */
+}
+
+.margin-left {
+    margin-left: 90px;   /* Margen izquierdo */
+}
+
+.margin-right {
+    margin-right: 90px;  /* Margen derecho */
+}
+
+/* Colores */
+.white-text {
+    color: white;
+}
+
+.green-text {
+    color: #32B70D;
+}
+
+/* Tamaño máximo */
+.max-width40 {
+    max-width: 40%;
+}
+.max-width50 {
+    max-width: 50%;
+}
+.max-width70 {
+    max-width: 70%;
+}
+.max-width90 {
+    max-width: 90%;
 }
 
 /* Estilos del header */
@@ -44,27 +104,27 @@ header {
     z-index: 1000;
 }
 
-.navbar {
-    display: flex;
+#navbar {
+    background-color: #0C0C0C;
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
     justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
+   /*  align-items: center; */
+   display: flex;
 }
 
 .logo img {
     width: 200px;
 }
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
+  
 .nav-links li {
     margin-left: 4rem;
 }
 
 .nav-links a {
+    float: left;
     color: white;
     text-decoration: none;
     font-size: 1rem;
@@ -81,14 +141,52 @@ header {
     margin-right: 0.5rem;
 }
 
-.burger {
-    display: none;
-    cursor: pointer;
+/* Estilos de enlaces de navegación */
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
 }
 
-.burger i {
-    font-size: 1.5rem;
+/* Estilos para el dropdown */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
     color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: #0C0C0C;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Hide the link that should open and close the nav on small screens */
+#menuIcon {
+    display: none;
+  }
+
+
+/* Estilos para la transición de animación */
+.nav-links.nav-active {
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -99,22 +197,31 @@ header {
         height: 100vh;
         top: 0;
         background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         transition: transform 0.5s ease-in;
     }
-    .nav-links li {
-        margin: 1.5rem 0;
+    .nav-links.nav-active {
+        display: flex;
     }
     .burger {
         display: block;
     }
-    .nav-active {
-        transform: translateX(0%);
+}
+
+/* Animación para los enlaces */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
+
 
 /* Estilos de la sección de aterrizaje */
 .landing {
@@ -128,14 +235,6 @@ header {
 .landing-content {
     text-align: right;
     color: white;
-}
-
-h1 {
-    font-family: 'Bebas Neue';
-    font-weight: 400;
-    font-size: 4rem;
-    margin-bottom: 0rem;
-    margin-right: 1rem;
 }
 
 .landing-content h2 {
@@ -226,23 +325,12 @@ h1 {
     background-image: url('img/EntrenamientoGuiadoOnline.png');
 }
 
-.text-right {
-    text-align: right;
-    color: white;
-}
-
-.text-left {
-    text-align: left;
-    color: white;
-}
-
 .split h2 {
     font-family: 'Bebas Neue';
     font-weight: 400;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
-
 
 /* Estilos para la sección ¿Por qué elegirnos? */
 .why-choose-us {
@@ -251,21 +339,6 @@ h1 {
     text-align: center;
     padding: 4rem 2rem;
 }
-
-.why-choose-us h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.why-choose-us .white-text {
-    color: white;
-}
-
-.why-choose-us .green-text {
-    color: #32B70D;
-}
-
 
 .benefits {
     display: grid;
@@ -291,48 +364,16 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-
-/* Estilos para la sparación */
+/* Estilos para la separación */
 .separador {
-    width: 100%;                /* Ajusta el ancho*/
+    display: block;
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 100%;   /* Ajusta el ancho */
 }
 
+/* Estilos para sobre nosotros */
 .about-us {
     background-color: #0C0C0C;
     color: white;
-    padding-top: 10%;
-    padding-left: 10%
-;
-}
-.conteiner {
-    display: flex;
-    height: 100vh;
-}
-
-.info, .photo {
-    flex: 1; /* Cada div ocupa el 50% del ancho del contenedor */
-    float: right;
-    padding: 20px;
-}
-
-.photo img {
-    max-width: 70%;
-    max-height: 70%;
-    
-}
-
-.about-us h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 3rem;
-    color: #f4f9f2;
-    text-align: left;
-    padding-left: 50px;
-    
-}
-.parrafos {
-    text-align: left;
-    padding-left: 50px;
-    padding-top: 10px;
-    max-width: 85%;
-    max-height: 85%;
+    padding: 4rem 2rem;
 }

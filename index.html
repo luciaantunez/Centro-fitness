@@ -12,7 +12,7 @@
 <body id="home">
     <!-- Header con navegación -->
     <header>
-        <nav class="navbar">
+        <nav id="navbar" class="navbar">
             <div class="logo">
                 <a href="#" id="logoGym"><img src="img/logo.png" alt="Logo del Gimnasio"></a>
             </div>
@@ -20,18 +20,26 @@
                 <li><a id="inicio" href="#inicio">INICIO</a></li>
                 <li><a id="sobre-nosotros" href="#sobre-nosotros">SOBRE NOSOTROS</a></li>
                 <li><a href="gimnacio.html">GIMNASIO</a></li>
-                <li><a id="asesoria-online" href="#asesoria-online">ASESORÍA ONLINE</a></li>
+                <li class="dropdown">
+                    <a id="asesoria-online" href="#asesoria-online">ASESORÍA ONLINE</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#rutinasPersonalizadas">RUTINAS PERSONALIZADAS</a></li>
+                        <li><a href="#entrenamientoOnline">ENTRENAMIENTO GUIADO ONLINE</a></li>
+                    </ul>
+                </li>
                 <li><a id="contacto" href="#contacto">CONTACTO</a></li>
                 <li><a href="#carrito"><i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="#buscar"><i class="fas fa-search"></i></a></li>
+                <li><a href="javascript:void(0);" id="menuIcon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
             </ul>
-            <div class="burger">
-                <i class="fas fa-bars"></i>s
-            </div>
         </nav>
     </header>
     
+    
     <main>
+
         <!-- Sección de aterrizaje -->
         <section id="ini" class="landing">
             <div class="landing-content">
@@ -48,22 +56,23 @@
         <section id="asesoria-o" class="split-section">
             <div class="split left">
                 <div class="content text-right">
-                    <h2>RUTINAS <br> PERSONALIZADAS</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2 class="text-right">RUTINAS <br> PERSONALIZADAS</h2>
+                    <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <button class="btn btn-green-outline">VER MÁS</button>
                 </div>
             </div>
             <div class="split right">
                 <div class="content text-left">
                     <h2>ENTRENAMIENTO <br> GUIADO ONLINE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <button class="btn btn-green-outline">VER MÁS</button>
                 </div>
             </div>
         </section>
+
         <!-- Sección ¿Por qué elegirnos? -->
         <section class="why-choose-us">
-            <h2><span class="white-text">¿Por qué</span> <span class="green-text">elegirnos?</span></h2>
+            <h2 class="text-center"><span class="white-text">¿Por qué</span> <span class="green-text">elegirnos?</span></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="benefits margin-custom">
                 <div class="benefit">
@@ -72,35 +81,35 @@
                 </div>
                 <div class="benefit">
                     <h3>Equipamiento y Facilidades</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>                </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
                 <div class="benefit">
                     <h3>Información Nutricional</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>                </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
                 <div class="benefit">
                     <h3>Asesorías Fitness</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>                </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
             </div>
         </section>
 
         <!-- Imagen separador -->
         <img src="img/separador.png" alt="Separador" class="separador">
 
-        <section id="about-us" class="about-us">
-            <div class="conteiner">
-                <div class="info">
-                    <h2>SOBRE NOSOTROS</h2>
-                    <div class="parrafos">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                    </div>
-                </div>
-                <div class="photo">
-                    <img src="img/perfil.jpg" alt="perfil">
-                </div>
+        <!-- Sobre Nosotros -->
+        <section id="about-us" class="split-section about-us">
+            <div class="max-width50 margin-left">
+                <h2 class="text-left">SOBRE NOSOTROS</h2>
+                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="text-left">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+            <div class="margin-right text-right">
+                <img src="img/perfil.png" alt="perfil" class="max-width90">
             </div>
         </section>
     </main>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
