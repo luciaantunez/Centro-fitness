@@ -1,7 +1,19 @@
-const nav = document.getElementById("navbar");
+var nav = document.getElementById("navbar");
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+
+/* FUNCION PARA RESPONSIVE NAVBAR */
+function responsiveNavbar() {
+    if (nav.className === "topnav") {
+        nav.className += " responsive";
+    } else {
+        nav.className = "topnav";
+    }
+  }
+
+
+/* FUNCION NAVBAR APARECE Y DESAPARECE CON SCROLL */
 var prevScrollPosition = window.scrollY;
+
 window.onscroll = function () {
     var currentScrollPosition = window.scrollY;
     if (prevScrollPosition > currentScrollPosition) {
@@ -10,16 +22,5 @@ window.onscroll = function () {
         nav.style.top = "-50px";
     }
     prevScrollPosition = currentScrollPosition;
-}
+};
 
-
-
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
