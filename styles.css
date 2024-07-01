@@ -411,3 +411,307 @@ p {
 }
 
 
+
+
+/* Sección de testimonios */
+
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0C0C0C;
+  color: white;
+}
+
+.testimonials h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.testimonials .highlight {
+  color: #32B70D;
+}
+
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Oculta contenido que se salga del contenedor */
+}
+
+.testimonial-container .fa-chevron-left,
+.testimonial-container .fa-chevron-right {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.testimonial-container .fa-chevron-left {
+  left: 10px;
+}
+
+.testimonial-container .fa-chevron-right {
+  right: 10px;
+}
+/* Testimonio individual */
+.testimonial {
+  background-color: #0C0C0C;
+  padding: 20px;
+  border-radius: 10px;
+  display: none; /* Inicialmente oculta todos los testimonios */
+  align-items: center;
+  max-width: 800px;
+  margin: 0 50px;
+  display: flex; /* Asegura que los elementos hijos estén en línea */
+}
+/* Imagen dentro del testimonio */
+.testimonial .image-container {
+  position: relative;
+  width: 200px; /* Fija el ancho del contenedor de la imagen */
+  height: 274px; /* Fija la altura del contenedor de la imagen */
+  margin-right: 20px;
+  border: 3px solid #32B70D;
+  border-radius: 10px;
+  overflow: hidden; /* Oculta parte de las imágenes que se salga del contenedor */
+  display: flex; /* Establece el contenedor como flexbox */
+  align-items: center; /* Centra verticalmente las imágenes */
+  justify-content: center; /* Centra horizontalmente las imágenes */
+  cursor: pointer; /* Cambia el cursor a mano al pasar sobre la imagen */
+}
+
+/* Estilos para las imágenes antes y después */
+.testimonial .image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out; /* Transición suave para el cambio de opacidad */
+}
+
+/* Inicialmente hace invisible la imagen de "después" */
+.testimonial .image-container .after {
+  opacity: 0;
+}
+
+/* Al hacer hover, muestra la imagen de "después" y oculta la de "antes" */
+.testimonial .image-container:hover .after {
+  opacity: 1;
+}
+
+.testimonial .image-container:hover .before {
+  opacity: 0;
+}
+
+/* Para pantallas pequeñas, cambia la imagen al hacer clic */
+@media (max-width: 768px) {
+  .testimonial .image-container:active .after {
+    opacity: 1;
+  }
+  .testimonial .image-container:active .before {
+    opacity: 0;
+  }
+}
+
+/* Contenido del testimonio */
+.testimonial-content {
+  flex: 1;
+  text-align: left;
+}
+
+.testimonial h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Estrellas de calificación */
+.stars {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.stars i {
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Paginación */
+.pagination {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #32B70D;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .testimonial-container {
+      flex-direction: column;
+  }
+
+  .testimonial {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .testimonial .image-container {
+      margin-bottom: 20px;
+      margin-right: 0px;
+  }
+
+  .testimonial-content {
+      text-align: center;
+  }
+
+  .testimonial-container .fa-chevron-left,
+  .testimonial-container .fa-chevron-right {
+      display: block; /* Asegura que las flechas sean visibles */
+  }
+
+  .stars{
+    justify-content: center
+  }
+}
+
+
+
+
+
+
+/* Sección de contacto */
+.contact-section {
+  background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  background-image: url(img/fondoPesas.png);
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el área */
+  background-position: center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* La imagen de fondo se mantendrá fija al hacer scroll */
+  padding: 70px 0px;
+  position: relative;
+  text-align: center;
+}
+
+.contact-container {
+  background: rgba(0, 0, 0, 0.9); /* Fondo negro más oscuro */
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left; /* Alineación del texto a la izquierda */
+  flex: 1;
+}
+
+.form-group label {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px; /* Margen inferior para espacio entre inputs */
+}
+
+.form-group textarea {
+  resize: none;
+  height: 100px; /* Ajustar altura del textarea */
+}
+
+.contact-form button {
+  background-color: #32b70d;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%; /* Ocupa la mitad del ancho en pantallas grandes */
+  align-self: left; /* Centrar el botón */
+}
+
+.contact-form button:hover {
+  background-color: #28a305;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.social-media a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #32b70d;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .form-row {
+      flex-direction: column;
+  }
+
+  .contact-form button {
+      width: 100%; /* Ocupa todo el ancho en pantallas pequeñas y medianas */
+  }
+}
