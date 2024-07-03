@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleCarrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body id="carrito">
+    <header>
+        <nav id="navbar" class="navbar">
+            <a href="index.html#landing">
+                <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            </a>
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
+                <a id="about-us-btn" href="index.html#about-us">NOSOTROS</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a id="search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="cart-container">
+            <div class="cart-header">
+                <h1 class="titulo">Carrito</h1>
+                <a href="#" class="back-link"><i class="fas fa-arrow-right"></i> Atrás</a>
+            </div>
+            <div class="cart-item">
+                <img src="img/carrito_ejemplo.jpeg" alt="Rutina Personalizada Online">
+                <div class="item-details">
+                    <p>PLANES FITNESS</p>
+                </div>
+                <div class="item-quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="item-price">
+                    <p>100 USD</p>
+                </div>
+                <div class="item-remove">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+            <div class="checkout">
+                <button class="btn">Siguiente</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Dirección</h3>
+                <p>Avenida Uruguay <br>Manzana 42, Solar 11.<br>Shangrilá</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> 099 999 999</p>
+                <p><i class="fas fa-envelope"></i> gym@gmail.com</p>
+                <p><i class="fas fa-instagram"></i> gym_insta</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
