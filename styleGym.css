@@ -1,0 +1,100 @@
+
+body {
+    background-color: #0C0C0C;
+}
+
+p {
+    color:#F4F9F2;
+    font-family: 'Inter';
+}
+
+h2 {
+    color: #F4F9F2;
+}
+
+.membresia {
+    margin-top: 16%;
+    text-align: center;
+}
+
+.contenido {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        margin: 70px 12%;
+    }
+
+
+.background-container-Gym {
+    height: 70vh;
+    width: 100%;
+    background-image: url('img/gymBack.jpg');
+    margin: 45px auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left-aligned-title {
+    color: #F4F9F2;
+    float: right;
+    text-align: right;
+    margin-right: 8%;
+    margin-top: 8%;
+}
+
+.letra-chica {
+    margin-right: 6%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.parrafo-membresia{
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+
+/* Elementos flex */
+.flex-item {
+    background-color: #3A4237;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    flex: 1; /* Todas las columnas tienen el mismo ancho */
+    text-align: center;
+}
+
+.flex-item:hover {
+    background-color:#1c1e1b;
+}
+
+.styled-hr{
+    border: 0;
+    height: 1px;
+    background: #32b70d;
+    margin: 20px 0;
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: stretch; /* Columnas se estiran para ocupar el ancho completo */
+    }
+
+    .flex-item {
+        margin: 10px 0;
+    }
+}
+
+#columna-membresia {
+    margin-top: 3%;
+}

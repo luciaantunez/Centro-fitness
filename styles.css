@@ -33,6 +33,13 @@ h2 {
   color: #f4f9f2;
 }
 
+h3 {
+  font-family: "Bebas Neue";
+  font-size: 2rem;
+  color: #f4f9f2;
+  letter-spacing: 0.3rem;
+}
+
 p {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
