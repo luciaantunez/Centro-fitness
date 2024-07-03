@@ -17,6 +17,8 @@ body {
 
 #home {
   background-image: url("img/fondo.png");
+  background-size: cover;
+  background-position: 30% center; /* Ajuste para centrar una parte específica de la imagen */
 }
 
 h1 {
@@ -380,12 +382,20 @@ p {
 
 
 
+
+
+
 /* Estilos para la separación */
 .separador {
   display: flex;
   margin: 0 auto; /* Centrar horizontalmente */
   width: 100%;   /* Ajusta el ancho */
 }
+
+
+
+
+
 
 
 /* Estilos para sobre nosotros */
@@ -459,7 +469,6 @@ p {
 }
 /* Testimonio individual */
 .testimonial {
-  background-color: #0C0C0C;
   padding: 20px;
   border-radius: 10px;
   display: none; /* Inicialmente oculta todos los testimonios */
@@ -715,3 +724,273 @@ p {
       width: 100%; /* Ocupa todo el ancho en pantallas pequeñas y medianas */
   }
 }
+
+
+
+
+
+
+
+
+/* Footer styles */
+.footer {
+  background-color: #0C0C0C;
+  color: #f4f9f2;
+  padding: 5% 10%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-column h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.footer-column p i {
+  margin-right: 10px;
+}
+
+/* Responsive footer Styles */
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 20px 0;
+  }
+}
+
+
+
+
+
+
+
+.gym-section {
+  background-image: url("img/gym-fondo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 30% center; /* Ajuste para centrar una parte específica de la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.gym-content {
+  background-color: #FBFDFC;
+  text-align: right;
+  padding: 2% 3%;
+}
+
+.gym-content h2 {
+  text-align: right;
+  color: #0C0C0C;
+}
+
+.gym-content p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: right;
+  color: #0C0C0C;
+}
+
+
+.location {
+  text-align: center;
+  padding: 50px 0px;
+  background-image: url(img/gym-fondo2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+.location-bg {
+  background-color: #0c0c0ce2;
+  padding: 50px 20px;
+}
+
+.location h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 30px;
+}
+
+.location-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.info .address, .info .hours {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info i {
+  font-size: 2rem;
+  color: #32B70D;
+  margin-right: 10px;
+}
+
+.info p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.map iframe {
+  border-radius: 10px;
+  border: 0;
+  width: 600px;
+  height: 450px;
+}
+
+@media (max-width: 768px) {
+  .location-content {
+      flex-direction: column;
+  }
+
+  .map iframe {
+      width: 100%;
+      height: 300px;
+  }
+
+  .info {
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .info .address, .info .hours {
+      justify-content: center;
+  }
+}
+
+
+
+
+/* Estilos de la sección de membresías */
+.membresias-section {
+  text-align: center;
+  padding: 10% 5%;
+  background-color: #0C0C0C;
+  color: white;
+}
+
+.membresias-section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 30px;
+  font-weight: thin; /* peso de la fuente */
+}
+
+.membresias-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.membresia-card {
+  background-color: #3A4237;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+  flex: 1;
+}
+
+.membresia-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em; /* Aumenta el espaciado entre letras */
+  line-height: 1.2; /* Aumenta la altura de la línea */
+}
+
+.membresia-card .price {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.membresia-card ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin-left: 0; /* Asegúrate de que no haya margen adicional a la izquierda */
+}
+
+.membresia-card li {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #fff;
+    padding-left: 20px; /* Añadir padding para evitar que el texto toque el borde izquierdo */
+    text-align: left; /* Asegura que cada elemento de la lista esté alineado a la izquierda */
+}
+
+.membresia-card li i {
+  color: #32B70D;
+  margin-right: 10px;
+}
+
+.membresia-card button {
+  background-color: #32B70D;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.07em; /* Aumenta el espaciado entre letras */
+  line-height: 1.5; /* Aumenta la altura de la línea */
+}
+
+.membresia-card button:hover {
+  background-color: #28A745;
+}
+
+@media (max-width: 768px) {
+  .membresias-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .membresia-card {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+.divider {
+  height: 2px;
+  background-color: #32B70D; /* Color verde */
+  margin: 10px 0; /* Espacio vertical alrededor de la línea */
+}
+

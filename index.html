@@ -15,19 +15,21 @@
     <!-- Header con barra de navegación. -->
     <header>
         <nav id="navbar" class="navbar">
-            <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            <a href="index.html#landing">
+                <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            </a>
             <div class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
                     <i class="fa fa-bars"></i>
                 </a>
-                <a id="inicio" href="#inicio">INICIO</a>
-                <a id="sobre-nosotros" href="#sobre-nosotros">NOSOTROS</a>
-                <a href="gimnacio.html" id="gym">GIMNASIO</a>
-                <a id="contacto" href="#contacto">CONTACTO</a>
-                <a href="#carrito" id="carrito">
+                <a id="init-btn" href="index.html#landing">INICIO</a>
+                <a id="about-us-btn" href="index.html#about-us">NOSOTROS</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="cart-btn">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                <a href="#buscar" id="buscar">
+                <a id="search-btn">
                     <i class="fas fa-search"></i>
                 </a>
             </div>
@@ -41,15 +43,15 @@
                 <h1> TU OBJETIVO <br> ES MI PRIORIDAD</h1>
                 <h2>FRANCO FUNGI ASESORIAS FITNESS ONLINE - ENTRENAMIENTO</h2>
                 <div class="buttons">
-                    <button class="btn btn-outline">RUTINAS</button>
-                    <button class="btn btn-solid">ENTRENAMIENTO ONLINE</button>
+                    <button class="btn btn-outline" onclick="location.href='planesFitness.html'">Planes fitness</button>
+                    <button class="btn btn-solid" onclick="location.href='asesoriaOnline.html'">Asesorías online</button>
                 </div>
             </div>
         </section>
 
 
         <!-- Sección de Rutinas y Entrenamiento -->
-        <section id="asesoria-o" class="split-section">
+        <section id="asesoriasYplanes" class="split-section">
             <div class="split left">
                 <div class="content text-right">
                     <h2 class="text-right">PLANES <br> FITNESS</h2>
@@ -58,7 +60,7 @@
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button class="btn btn-green-outline">VER MÁS</button>
+                    <button class="btn btn-green-outline" onclick="location.href='planesFitness.html'">VER MÁS</button>
                 </div>
             </div>
             <div class="split right">
@@ -69,14 +71,14 @@
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button class="btn btn-green-outline">VER MÁS</button>
+                    <button class="btn btn-green-outline" onclick="location.href='asesoriaOnline.html'">VER MÁS</button>
                 </div>
             </div>
         </section>
 
 
         <!-- Sección ¿Por qué elegirnos? -->
-        <section class="why-choose-us">
+        <section id="why-choose-us" class="why-choose-us">
             <h2 class="text-center"><span class="white-text">¿Por qué</span> <span class="green-text">elegirnos?</span>
             </h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -153,11 +155,9 @@
                         <img src="img/GONZALO_GONZALEZ_2.png" alt="After Image" class="after">
                     </div>
                     <div class="testimonial-content">
-                        <!--                         <h3>GONZALO GONZALEZ</h3>
- -->
                         <p>Franco es un entrenador increíble. Sus rutinas personalizadas me han ayudado a mejorar mi
                             forma física rápidamente, y su guía constante durante los entrenamientos me asegura que
-                            siempre hago los ejercicios correctamente. ¡Totalmenterecomendado!</p>
+                            siempre hago los ejercicios correctamente. ¡Totalmente recomendado!</p>
                         <div class="stars">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -175,8 +175,6 @@
                         <img src="img/María_Martinez_2.png" alt="After Image" class="after">
                     </div>
                     <div class="testimonial-content">
-                        <!--                         <h3>MARIA MARTINEZ</h3>
- -->
                         <p>El programa de entrenamiento de Franco es excelente. Me ha ayudado a alcanzar mis objetivos
                             de fitness de una manera eficiente y segura. Sus consejos y seguimiento constante han sido
                             clave en mi progreso. ¡Muy recomendado!</p>
@@ -197,7 +195,6 @@
                         <img src="img/CARLOS_LOPEZ_2.png" alt="After Image" class="after">
                     </div>
                     <div class="testimonial-content">
-                        <!-- <h3>CARLOS LOPEZ</h3> -->
                         <p>Gracias a Franco, he logrado resultados increíbles en poco tiempo. Su enfoque personalizado y
                             su conocimiento profundo en fitness han sido fundamentales para mi transformación.
                             Recomiendo sus servicios a todos los que quieran mejorar su salud y forma física.</p>
@@ -218,28 +215,28 @@
                 <span class="dot active"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
-                <!-- Añade más puntos si hay más testimonios -->
             </div>
         </section>
 
+
         <!-- Sección de Contacto -->
-        <section class="contact-section">
+        <section id="contact" class="contact-section">
             <div class="contact-container">
                 <h2 class="text-left ">Contactanos</h2>
                 <form class="contact-form">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="first-name">Nombre</label>
-                            <input type="text" id="first-name" placeholder="Franco" required>
+                            <input type="text" id="first-name" placeholder="Nombre" required>
                         </div>
                         <div class="form-group">
                             <label for="last-name">Apellido</label>
-                            <input type="text" id="last-name" placeholder="Fungi" required>
+                            <input type="text" id="last-name" placeholder="Apellido" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="fran@gmail.com" required>
+                        <input type="email" id="email" placeholder="tu-correo@gmail.com" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Tu mensaje</label>
@@ -249,17 +246,32 @@
                 </form>
             </div>
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
                 <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
         </section>
-        
-        
+
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Dirección</h3>
+                <p>Avenida Uruguay <br>Manzana 42, Solar 11.<br>Shangrilá</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> 099 999 999</p>
+                <p><i class="fas fa-envelope"></i> gym@gmail.com</p>
+                <p><i class="fas fa-instagram"></i> gym_insta</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
