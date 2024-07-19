@@ -166,6 +166,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  z-index: 9999; /* Un valor suficientemente alto para asegurar que esté en frente del resto de elementos*/
 }
 
 .topnav a {

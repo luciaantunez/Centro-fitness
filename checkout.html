@@ -39,26 +39,52 @@
                 <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Atrás</a>
             </div>
             <form class="checkout-form">
-                <p>Número de tarjeta</p>
-                <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                <div class="card-details">
+                    <div class="card-fields">
+                        <p>Número de tarjeta</p>
+                        <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                        
+                        <p>Nombre del titular</p>
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                    <div class="card-image">
+                        <img src="img/tarjeta.png" alt="Tarjeta">
+                    </div>
+                </div>
+                <div class="validation-fields">
+                    <div>
+                        <p>Validad</p>
+                        <input type="text" placeholder="mm/aa" maxlength="5">
+                    </div>
+                    <div>
+                        <p>Código de verificación</p>
+                        <input type="text" placeholder="CVV" maxlength="3">
+                    </div>
+                </div>
                 
-                <p>Nombre del titular</p>
-                <input type="text" placeholder="Nombre">
-
-                <p>Validad</p>
-                <input type="text" placeholder="mm/aa" maxlength="5">
-
-                <p>Código de verificación</p>
-                <input type="text" placeholder="CVV" maxlength="3">
-
                 <h1>Datos de contacto</h1>
                 <hr class="separator">
                 <div class="contact-fields">
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido">
-                    <input type="email" placeholder="Email">
-                    <input type="tel" placeholder="Teléfono">
-                    <textarea placeholder="Escribe tu mensaje aquí"></textarea>
+                    <div>
+                        <p>Nombre</p>
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                    <div>
+                        <p>Apellido</p>
+                        <input type="text" placeholder="Apellido">
+                    </div>
+                    <div class="full-width">
+                        <p>Email</p>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="full-width">
+                        <p>Teléfono</p>
+                        <input type="tel" placeholder="Teléfono">
+                    </div>
+                    <div class="full-width">
+                        <p>Mensaje</p>
+                        <textarea placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
                 </div>
                 
                 <button type="submit" class="btn">Aceptar</button>
