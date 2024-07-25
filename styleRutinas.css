@@ -159,18 +159,27 @@ h2 {
   background-repeat: no-repeat;
 }
 .container2 p {
-  color:#0c0c0c;
-  font-family: "Inter";
-  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  text-align: right;
   margin: 0rem 1rem 1rem 1rem;
-  font-weight: bold;
+  
 }
+
 .title2 {
-  color: #0c0c0c;
+  color:#f4f9f2;
   float: right;
   text-align: right;
   margin: 20% 10% 0% 10%;
 }
+
+.title2 h2{
+  margin-bottom: 5%;
+}
+
 @media (max-width: 768px) {
   .title2, container2 p{
     margin: 45% 10% 0% 10%;
@@ -184,9 +193,8 @@ h2 {
 .btn {
   width: 150px;
   display: flex;
-  align-items: center;
+  align-self: center;
   justify-content: center;
   padding: 10px;
   margin-left: auto;
 }
-
