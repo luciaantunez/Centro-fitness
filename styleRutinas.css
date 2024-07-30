@@ -21,7 +21,7 @@
   background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
   background-image: url(img/corriendo.jpg);
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el área */
-  background-position: center; /* Centra la imagen de fondo */
+  background-position: top; /* Centra la imagen de fondo desde arriba*/
   background-attachment: fixed; /* La imagen de fondo se mantendrá fija al hacer scroll */
   position: relative;
   text-align: center;
@@ -31,7 +31,7 @@
   background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
   background-image: url(img/online.jpg);
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el área */
-  background-position: center; /* Centra la imagen de fondo */
+  background-position: top; /* Centra la imagen de fondo desde arriba*/
   background-attachment: fixed; /* La imagen de fondo se mantendrá fija al hacer scroll */
   position: relative;
   text-align: center;
@@ -148,15 +148,14 @@ h2 {
   }
 }
 
-
 /* Section: ¿Estás listo para empezar?  */
 .container2 {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
-  background-image: url("img/corriendo2.jpg");
+  /* background-image: url("img/corriendo2.jpg"); 
   background-size: cover;
   background-position: 35% center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 .container2 p {
   font-family: 'Inter', sans-serif;
@@ -173,7 +172,7 @@ h2 {
   color:#f4f9f2;
   float: right;
   text-align: right;
-  margin: 20% 10% 0% 10%;
+  margin: 10% 10% 0% 10%;
 }
 
 .title2 h2{
@@ -182,12 +181,12 @@ h2 {
 
 @media (max-width: 768px) {
   .title2, container2 p{
-    margin: 45% 10% 0% 10%;
+    margin: 15% 10% 0% 10%;
   }
 }
 @media (max-width: 480px) {
   .title2, container2 p {
-    margin: 70% 5% 0% 5%;
+    margin: 20% 5% 0% 5%;
   }
 }
 .btn {
