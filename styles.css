@@ -16,7 +16,7 @@ body {
 }
 
 #home {
-  background-image: url("img/fondo.png");
+  background-image: url("img/fondoNuevo2.jpg");
   background-size: cover;
   background-position: 30% center; /* Ajuste para centrar una parte específica de la imagen */
 }
@@ -390,7 +390,8 @@ p {
 .separador {
   display: flex;
   margin: 0 auto; /* Centrar horizontalmente */
-  width: 100%;   /* Ajusta el ancho */
+  width: 100%; /* Ajusta el ancho */
+  
 }
 
 
