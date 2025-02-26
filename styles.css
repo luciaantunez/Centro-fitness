@@ -18,7 +18,8 @@ body {
 #home {
   background-image: url("img/fondoNuevo2.jpg");
   background-size: cover;
-  background-position: 30% center; /* Ajuste para centrar una parte específica de la imagen */
+  background-position: 30% center;
+  /* Ajuste para centrar una parte específica de la imagen */
 }
 
 h1 {
@@ -46,26 +47,40 @@ p {
 .text-right {
   text-align: right;
 }
+
 .text-left {
   text-align: left;
 }
+
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 
 /* Estilos de Márgenes */
 .margin-custom {
-  margin-top: 0px; /* Margen superior */
-  margin-right: 90px; /* Margen derecho */
-  margin-bottom: 0px; /* Margen inferior */
-  margin-left: 90px; /* Margen izquierdo */
+  margin-top: 0px;
+  /* Margen superior */
+  margin-right: 90px;
+  /* Margen derecho */
+  margin-bottom: 0px;
+  /* Margen inferior */
+  margin-left: 90px;
+  /* Margen izquierdo */
 }
+
 .margin-left {
-  margin-left: 90px; /* Margen izquierdo */
+  margin-left: 90px;
+  /* Margen izquierdo */
 }
+
 .margin-right {
-  margin-right: 90px; /* Margen derecho */
+  margin-right: 90px;
+  /* Margen derecho */
 }
 
 
@@ -73,9 +88,11 @@ p {
 .white-text {
   color: #f4f9f2;
 }
+
 .green-text {
   color: #32b70d;
 }
+
 .dark-text {
   color: #0C0C0C;
 }
@@ -85,12 +102,15 @@ p {
 .max-width40 {
   max-width: 40%;
 }
+
 .max-width50 {
   max-width: 50%;
 }
+
 .max-width70 {
   max-width: 70%;
 }
+
 .max-width90 {
   max-width: 90%;
 }
@@ -158,15 +178,20 @@ p {
 #navbar {
   overflow: hidden;
   background-color: #0c0c0c;
-  position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
-  width: 100%; /* Full width */
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  position: fixed;
+  /* Make it stick/fixed */
+  top: 0;
+  /* Stay on top */
+  width: 100%;
+  /* Full width */
+  transition: top 0.3s;
+  /* Transition effect when sliding down (and up) */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  z-index: 9999; /* Un valor suficientemente alto para asegurar que esté en frente del resto de elementos*/
+  z-index: 9999;
+  /* Un valor suficientemente alto para asegurar que esté en frente del resto de elementos*/
 }
 
 .topnav a {
@@ -174,14 +199,15 @@ p {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding:  10px 40px 10px 10px;
+  padding: 10px 40px 10px 10px;
   text-decoration: none;
   font-size: 13px;
 }
 
 .topnav a:hover {
   background-color: #1C1E1B;
-  color: #32b70d;;
+  color: #32b70d;
+  ;
 }
 
 .topnav .icon {
@@ -190,7 +216,10 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
@@ -198,12 +227,16 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
+
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
     display: block;
@@ -245,49 +278,49 @@ p {
 
 @media (max-width: 1200px) {
   .landing-content h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   .landing-content h2 {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
   .landing {
-      /* padding-right: 5%; */
-      justify-content: center;
+    /* padding-right: 5%; */
+    justify-content: center;
   }
 
   .landing-content {
-      text-align: center;
+    text-align: center;
   }
 
   .landing-content h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .landing-content h2 {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
 
   .buttons {
-      justify-content: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .landing-content h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .landing-content h2 {
-      font-size: 0.7rem;
+    font-size: 0.7rem;
   }
 
   .btn {
-      padding: 0.8rem 1.5rem;
-      font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -333,12 +366,13 @@ p {
 
 @media (max-width: 768px) {
   .split-section {
-      flex-direction: column;
-      padding: 10%;
+    flex-direction: column;
+    padding: 10%;
   }
+
   .split {
-      margin-bottom: 1rem;
-      padding: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -377,7 +411,7 @@ p {
 
 @media (max-width: 768px) {
   .benefits {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -389,10 +423,11 @@ p {
 /* Estilos para la separación */
 .separador {
   display: flex;
-  margin: 0 auto; /* Centrar horizontalmente */
-  width: 100%; /* Ajusta el ancho */
-  
-}
+  margin: 0 auto;
+  /* Centrar horizontalmente */
+  width: 100%;
+  /* Ajusta el ancho */
+  }
 
 
 
@@ -449,7 +484,8 @@ p {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden; /* Oculta contenido que se salga del contenedor */
+  overflow: hidden;
+  /* Oculta contenido que se salga del contenedor */
 }
 
 .testimonial-container .fa-chevron-left,
@@ -469,29 +505,40 @@ p {
 .testimonial-container .fa-chevron-right {
   right: 10px;
 }
+
 /* Testimonio individual */
 .testimonial {
   padding: 20px;
   border-radius: 10px;
-  display: none; /* Inicialmente oculta todos los testimonios */
+  display: none;
+  /* Inicialmente oculta todos los testimonios */
   align-items: center;
   max-width: 800px;
   margin: 0 50px;
-  display: flex; /* Asegura que los elementos hijos estén en línea */
+  display: flex;
+  /* Asegura que los elementos hijos estén en línea */
 }
+
 /* Imagen dentro del testimonio */
 .testimonial .image-container {
   position: relative;
-  width: 200px; /* Fija el ancho del contenedor de la imagen */
-  height: 274px; /* Fija la altura del contenedor de la imagen */
+  width: 200px;
+  /* Fija el ancho del contenedor de la imagen */
+  height: 274px;
+  /* Fija la altura del contenedor de la imagen */
   margin-right: 20px;
   border: 3px solid #32B70D;
   border-radius: 10px;
-  overflow: hidden; /* Oculta parte de las imágenes que se salga del contenedor */
-  display: flex; /* Establece el contenedor como flexbox */
-  align-items: center; /* Centra verticalmente las imágenes */
-  justify-content: center; /* Centra horizontalmente las imágenes */
-  cursor: pointer; /* Cambia el cursor a mano al pasar sobre la imagen */
+  overflow: hidden;
+  /* Oculta parte de las imágenes que se salga del contenedor */
+  display: flex;
+  /* Establece el contenedor como flexbox */
+  align-items: center;
+  /* Centra verticalmente las imágenes */
+  justify-content: center;
+  /* Centra horizontalmente las imágenes */
+  cursor: pointer;
+  /* Cambia el cursor a mano al pasar sobre la imagen */
 }
 
 /* Estilos para las imágenes antes y después */
@@ -500,7 +547,8 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.5s ease-in-out; /* Transición suave para el cambio de opacidad */
+  transition: opacity 0.5s ease-in-out;
+  /* Transición suave para el cambio de opacidad */
 }
 
 /* Inicialmente hace invisible la imagen de "después" */
@@ -522,6 +570,7 @@ p {
   .testimonial .image-container:active .after {
     opacity: 1;
   }
+
   .testimonial .image-container:active .before {
     opacity: 0;
   }
@@ -580,29 +629,30 @@ p {
 /* Media queries para responsividad */
 @media (max-width: 768px) {
   .testimonial-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .testimonial {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .testimonial .image-container {
-      margin-bottom: 20px;
-      margin-right: 0px;
+    margin-bottom: 20px;
+    margin-right: 0px;
   }
 
   .testimonial-content {
-      text-align: center;
+    text-align: center;
   }
 
   .testimonial-container .fa-chevron-left,
   .testimonial-container .fa-chevron-right {
-      display: block; /* Asegura que las flechas sean visibles */
+    display: block;
+    /* Asegura que las flechas sean visibles */
   }
 
-  .stars{
+  .stars {
     justify-content: center
   }
 }
@@ -614,18 +664,23 @@ p {
 
 /* Sección de contacto */
 .contact-section {
-  background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  background: rgba(0, 0, 0, 0.7);
+  /* Fondo negro con opacidad */
   background-image: url(img/fondoPesas.png);
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el área */
-  background-position: center; /* Centra la imagen de fondo */
-  background-attachment: fixed; /* La imagen de fondo se mantendrá fija al hacer scroll */
+  background-size: cover;
+  /* Ajusta el tamaño de la imagen para cubrir completamente el área */
+  background-position: center;
+  /* Centra la imagen de fondo */
+  background-attachment: fixed;
+  /* La imagen de fondo se mantendrá fija al hacer scroll */
   padding: 70px 0px;
   position: relative;
   text-align: center;
 }
 
 .contact-container {
-  background: rgba(0, 0, 0, 0.9); /* Fondo negro más oscuro */
+  background: rgba(0, 0, 0, 0.9);
+  /* Fondo negro más oscuro */
   padding: 40px 20px;
   border-radius: 10px;
   max-width: 600px;
@@ -654,7 +709,8 @@ p {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-  text-align: left; /* Alineación del texto a la izquierda */
+  text-align: left;
+  /* Alineación del texto a la izquierda */
   flex: 1;
 }
 
@@ -671,12 +727,14 @@ p {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  margin-bottom: 10px; /* Margen inferior para espacio entre inputs */
+  margin-bottom: 10px;
+  /* Margen inferior para espacio entre inputs */
 }
 
 .form-group textarea {
   resize: none;
-  height: 100px; /* Ajustar altura del textarea */
+  height: 100px;
+  /* Ajustar altura del textarea */
 }
 
 .contact-form button {
@@ -688,8 +746,10 @@ p {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 50%; /* Ocupa la mitad del ancho en pantallas grandes */
-  align-self: left; /* Centrar el botón */
+  width: 50%;
+  /* Ocupa la mitad del ancho en pantallas grandes */
+  align-self: left;
+  /* Centrar el botón */
 }
 
 .contact-form button:hover {
@@ -699,7 +759,8 @@ p {
 .social-media {
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  background: rgba(0, 0, 0, 0.7);
+  /* Fondo negro con opacidad */
   width: 100%;
   padding: 10px;
   margin-top: 30px;
@@ -719,11 +780,12 @@ p {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .form-row {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .contact-form button {
-      width: 100%; /* Ocupa todo el ancho en pantallas pequeñas y medianas */
+    width: 100%;
+    /* Ocupa todo el ancho en pantallas pequeñas y medianas */
   }
 }
 
@@ -789,7 +851,8 @@ p {
   background-image: url("img/gym-fondo.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: 30% center; /* Ajuste para centrar una parte específica de la imagen */
+  background-position: 30% center;
+  /* Ajuste para centrar una parte específica de la imagen */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -849,7 +912,8 @@ p {
   margin-right: 20px;
 }
 
-.info .address, .info .hours {
+.info .address,
+.info .hours {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -875,22 +939,23 @@ p {
 
 @media (max-width: 768px) {
   .location-content {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .map iframe {
-      width: 100%;
-      height: 300px;
+    width: 100%;
+    height: 300px;
   }
 
   .info {
-      align-items: center;
-      text-align: center;
-      margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  .info .address, .info .hours {
-      justify-content: center;
+  .info .address,
+  .info .hours {
+    justify-content: center;
   }
 }
 
@@ -908,7 +973,8 @@ p {
 .membresias-section h2 {
   font-family: 'Bebas Neue', sans-serif;
   margin-bottom: 30px;
-  font-weight: thin; /* peso de la fuente */
+  font-weight: thin;
+  /* peso de la fuente */
 }
 
 .membresias-container {
@@ -930,8 +996,10 @@ p {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 10px;
-  letter-spacing: 0.05em; /* Aumenta el espaciado entre letras */
-  line-height: 1.2; /* Aumenta la altura de la línea */
+  letter-spacing: 0.05em;
+  /* Aumenta el espaciado entre letras */
+  line-height: 1.2;
+  /* Aumenta la altura de la línea */
 }
 
 .membresia-card .price {
@@ -941,19 +1009,22 @@ p {
 }
 
 .membresia-card ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    margin-left: 0; /* Asegúrate de que no haya margen adicional a la izquierda */
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  margin-left: 0;
+  /* Asegúrate de que no haya margen adicional a la izquierda */
 }
 
 .membresia-card li {
-    margin: 10px 0;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    color: #fff;
-    padding-left: 20px; /* Añadir padding para evitar que el texto toque el borde izquierdo */
-    text-align: left; /* Asegura que cada elemento de la lista esté alineado a la izquierda */
+  margin: 10px 0;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #fff;
+  padding-left: 20px;
+  /* Añadir padding para evitar que el texto toque el borde izquierdo */
+  text-align: left;
+  /* Asegura que cada elemento de la lista esté alineado a la izquierda */
 }
 
 .membresia-card li i {
@@ -970,8 +1041,10 @@ p {
   cursor: pointer;
   font-size: 1rem;
   font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.07em; /* Aumenta el espaciado entre letras */
-  line-height: 1.5; /* Aumenta la altura de la línea */
+  letter-spacing: 0.07em;
+  /* Aumenta el espaciado entre letras */
+  line-height: 1.5;
+  /* Aumenta la altura de la línea */
 }
 
 .membresia-card button:hover {
@@ -980,19 +1053,20 @@ p {
 
 @media (max-width: 768px) {
   .membresias-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .membresia-card {
-      max-width: 100%;
-      margin-bottom: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }
 
 .divider {
   height: 2px;
-  background-color: #32B70D; /* Color verde */
-  margin: 10px 0; /* Espacio vertical alrededor de la línea */
+  background-color: #32B70D;
+  /* Color verde */
+  margin: 10px 0;
+  /* Espacio vertical alrededor de la línea */
 }
-
