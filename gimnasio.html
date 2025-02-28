@@ -50,9 +50,27 @@
             </div>
         </section>
 
-        
+            
         <!-- Sección de Membresías -->
         <section class="membresias-section">
+            <div class="container">
+                <div class="gallery" id="gallery">
+                    <img src="img/gym-fondo.jpg" alt="Imagen 1" onclick="openModal(this)">
+                    <img src="img/espejo_y_pesas.jpg" alt="Imagen 2" onclick="openModal(this)">
+                    <img src="img/fondoNuevo.jpg" alt="Imagen 3" onclick="openModal(this)">
+                    <img src="img/fondoPesas.png" alt="Imagen 4" onclick="openModal(this)">
+                    <img src="img/fondo.png" alt="Imagen 5" onclick="openModal(this)">
+                    <img src="img/pruebaGym.jpg" alt="Imagen 6" onclick="openModal(this)">
+                </div>
+            </div>
+        
+            <!-- Modal -->
+            <div class="modal" id="modal" onclick="closeModal(event)">
+                <div class="modal-content" onclick="closeModal(event)">×</div>
+                <img id="modalImage" src="" alt="Imagen ampliada">
+            </div>
+
+            
             <h2>Pago mensual</h2>
             <div class="membresias-container">
                 <div class="membresia-card">

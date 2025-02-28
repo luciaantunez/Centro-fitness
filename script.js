@@ -66,3 +66,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // INICIALIZA EL CAMBIO AUTOMÁTICO DE IMÁGENES
     startAutoImageChange();
 });
+
+   // GALLERIA
+
+   // Función para abrir el modal
+function openModal(image) {
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = image.src;  // Asignar la imagen clickeada al modal
+    modal.style.display = 'flex';  // Mostrar el modal
+}
+
+// Función para cerrar el modal
+function closeModal(event) {
+    // Si se hace clic en el fondo (no en la imagen), se cierra el modal
+    if (event.target === event.currentTarget) {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';  // Ocultar el modal
+    }
+}
