@@ -41,7 +41,7 @@
     <!-- Contenido -->
     <main>
         <section class="info-section">
-            <h1 class="title">Planes Fitness</h1>
+            <h1 id="nombre" class="title">Planes Fitness</h1>
 
             <!-- ¿Estás listo para alcanzar tu mejor versión? -->
             <div class="banner-container margin0">
@@ -66,8 +66,8 @@
                 </p>
             </div>
 
-        <!-- Videos Explicativos -->
-        <div class="container">
+            <!-- Videos Explicativos -->
+            <div class="container">
                 <i class="fa-brands fa-youtube"></i>
                 <div>
                     <h2>Videos Explicativos</h2>
@@ -79,10 +79,10 @@
                         maximizar
                         los resultados y minimizar el riesgo de lesiones.</p>
                 </div>
-        </div>
+            </div>
 
-        <!-- Beneficios Exclusivos -->
-        <div class="container">
+            <!-- Beneficios Exclusivos -->
+            <div class="container">
                 <i class="fa-solid fa-check"></i>
                 <div>
                     <h2>Beneficios Exclusivos</h2>
@@ -101,19 +101,18 @@
                             accesible.</li>
                     </ul>
                 </div>
-        </div>
+            </div>
 
-                <!-- ¿Estás listo para empezar? -->
-                <div class="container2">
-                    <div class="title2">
-                        <h1>¿Buscas atención personalizada?</h1>
-                        <button id="botonClaro" class="btn btn-solid" onclick="location.href='asesoriaOnline.html'">>>></button>
-                    </div>
+            <!-- ¿Estás listo para empezar? -->
+            <div class="container2">
+                <div class="title2">
+                    <h1>¿Estás listo para empezar?</h1>
+                    <p id="precio">Precio:100</p>
+                    <button id="btn-agregar-al-carrito" class="btn btn-solid"> Agregar al carrito</button>
                 </div>
+            </div>
 
         </section>
-
-
 
     </main>
 
@@ -134,6 +133,50 @@
     </footer>
 
     <script src="nav.js"></script>
+    <script src="carrito.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAuNctY2mqUZKvQlP8US7TWpJV5_Aj4Zzs",
+            authDomain: "ff-centrofitness.firebaseapp.com",
+            projectId: "ff-centrofitness",
+            storageBucket: "ff-centrofitness.firebasestorage.app",
+            messagingSenderId: "501372129487",
+            appId: "1:501372129487:web:8ef9ed0be21d4e2466a7ba",
+            measurementId: "G-W8B9L0BWBY"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <script src="/js/carrito.js"></script>
+
+    <script>
+        document.getElementById("btn-agregar-al-carrito").addEventListener("click", () => {
+            const producto = {
+                id: "planFitness",
+                nombre: "Plan Fitness",
+                precio: 100
+            };
+
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push(producto);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            alert("Producto agregado al carrito");
+        });
+    </script>
+
 </body>
 
 </html>
