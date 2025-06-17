@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styleCarrito.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body id="carrito">
     <header>
         <nav id="navbar" class="navbar">
@@ -26,39 +29,27 @@
                 <a id="cart-btn">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                <!-- <a id="search-btn">
-                    <i class="fas fa-search"></i>
-                </a> -->
             </div>
         </nav>
     </header>
+
     <main>
         <div class="cart-container">
             <div class="cart-header">
                 <h1 class="titulo">Carrito</h1>
-                <a href="#" class="back-link"><i class="fas fa-arrow-right"></i> Atrás</a>
+                <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Atrás</a>
             </div>
-            <div class="cart-item">
-                <img src="img/carrito_ejemplo.jpeg" alt="Rutina Personalizada Online">
-                <div class="item-details">
-                    <p>PLANES FITNESS</p>
-                </div>
-                <div class="item-quantity">
-                    <input type="number" value="1" min="1">
-                </div>
-                <div class="item-price">
-                    <p>100 USD</p>
-                </div>
-                <div class="item-remove">
-                    <i class="fas fa-trash"></i>
-                </div>
+            <div class="cart-item" id="productosAgregados">
+
             </div>
+
             <div class="checkout">
                 <button class="btn">Siguiente</button>
             </div>
         </div>
+
     </main>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -74,6 +65,44 @@
             </div>
         </div>
     </footer>
-    <script src="scriptCarrito.js"></script>
+
+    <script src="nav.js"></script>
+    <script src="Carrito.js"></script>
+
+    <script>
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const contenedor = document.getElementById("cart-container");
+
+        carrito.forEach(prod => {
+            const div = document.createElement("div");
+            div.innerHTML = `<h3>${prod.nombre}</h3><p>Precio: $${prod.precio}</p>`;
+            contenedor.appendChild(div);
+        });
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAuNctY2mqUZKvQlP8US7TWpJV5_Aj4Zzs",
+            authDomain: "ff-centrofitness.firebaseapp.com",
+            projectId: "ff-centrofitness",
+            storageBucket: "ff-centrofitness.firebasestorage.app",
+            messagingSenderId: "501372129487",
+            appId: "1:501372129487:web:8ef9ed0be21d4e2466a7ba",
+            measurementId: "G-W8B9L0BWBY"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
+
 </html>
