@@ -35,17 +35,23 @@
 
     <main>
         <div class="cart-container">
+            
             <div class="cart-header">
                 <h1 class="titulo">Carrito</h1>
-                <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Atrás</a>
+                <a href="#" class="back-link" onclick="history.back(); return false;"><i class="fas fa-arrow-left"></i> Atrás</a>
             </div>
-            <div class="cart-item" id="productosAgregados">
 
+            <div class="cart-item" id="productosAgregados">
+            </div>
+
+            <div>
+                <a href="#" id="totalCarrito"> </a>
             </div>
 
             <div class="checkout">
-                <button class="btn">Siguiente</button>
+                <button class="btn" onclick="window.location.href='checkout.html'">Siguiente</button>
             </div>
+
         </div>
 
     </main>
@@ -78,7 +84,7 @@
             div.innerHTML = `<h3>${prod.nombre}</h3><p>Precio: $${prod.precio}</p>`;
             contenedor.appendChild(div);
         });
-    </script>
+        </script>
 
     <script type="module">
         // Import the functions you need from the SDKs you need
@@ -103,6 +109,7 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
     </script>
+
 </body>
 
 </html>

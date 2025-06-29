@@ -11,9 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="item-details">
     <p>${producto.nombre}</p>
 </div>
-<div class="item-quantity">
-    <input type="number" value="1" min="1">
-</div>
 <div class="item-price">
     <p>${producto.precio} USD</p>
 </div>
@@ -24,4 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cartContainer.appendChild(item);
     });
+
+ const botonesEliminar = document.querySelectorAll(".item-remove");
+    botonesEliminar.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            const index = e.currentTarget.getAttribute("data-index");
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            location.reload(); // recarga la página para actualizar visualmente
+        });
+    });
+
+let total = 0;
+
+document.querySelectorAll(".item-price p").forEach(p => {
+    const valor = parseFloat(p.innerText.replace("USD", "").trim());
+    if (!isNaN(valor)) total += valor;
 });
+const totalDiv = document.getElementById("totalCarrito");
+totalDiv.innerHTML = `<p><strong>Total: ${total.toFixed(2)} USD</strong></p>`;
+
+});
+

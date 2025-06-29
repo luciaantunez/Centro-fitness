@@ -114,6 +114,7 @@ main {
     color: #32B70D;
     font-size: 1.2rem;
     flex: 1;
+    text-align: right;
 }
 
 .item-remove {
@@ -122,6 +123,18 @@ main {
     font-size: 1.2rem;
     color: #32B70D;
     flex: 1;
+    text-align: right;
+}
+
+#totalCarrito {
+    font-family: 'Inter', sans-serif;
+    color: #32B70D;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1%;
 }
 
 

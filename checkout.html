@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styleCheckout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav id="navbar" class="navbar">
@@ -26,9 +29,7 @@
                 <a id="cart-btn" href="carrito.html">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                <!-- <a id="search-btn">
-                    <i class="fas fa-search"></i>
-                </a> -->
+
             </div>
         </nav>
     </header>
@@ -36,10 +37,11 @@
         <div class="checkout-container">
             <div class="checkout-header">
                 <h1>Checkout</h1>
-                <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Atrás</a>
+                <a href="#" class="back-link" onclick="history.back(); return false;"><i class="fas fa-arrow-left"></i>
+                    Atrás</a>
             </div>
             <form class="checkout-form">
-                <div class="card-details">
+                <!-- <div class="card-details">
                     <div class="card-fields">
                         <p>Número de tarjeta</p>
                         <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
@@ -60,37 +62,41 @@
                         <p>Código de verificación</p>
                         <input type="text" placeholder="CVV" maxlength="3">
                     </div>
-                </div>
-                
-                <h1>Datos de contacto</h1>
-                <hr class="separator">
-                <div class="contact-fields">
-                    <div>
-                        <p>Nombre</p>
-                        <input type="text" placeholder="Nombre">
+                </div> -->
+                <div class="checkout">
+
+                    <div id="paypal-button-container" style="margin-top: 2rem;"></div>
+
+                    <h1>Datos de contacto</h1>
+                    <hr class="separator">
+                    <div class="contact-fields">
+                        <div>
+                            <p>Nombre</p>
+                            <input type="text" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <p>Apellido</p>
+                            <input type="text" placeholder="Apellido">
+                        </div>
+                        <div class="full-width">
+                            <p>Email</p>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="full-width">
+                            <p>Teléfono</p>
+                            <input type="tel" placeholder="Teléfono">
+                        </div>
+                        <div class="full-width">
+                            <p>Mensaje</p>
+                            <textarea placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>
                     </div>
-                    <div>
-                        <p>Apellido</p>
-                        <input type="text" placeholder="Apellido">
-                    </div>
-                    <div class="full-width">
-                        <p>Email</p>
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <div class="full-width">
-                        <p>Teléfono</p>
-                        <input type="tel" placeholder="Teléfono">
-                    </div>
-                    <div class="full-width">
-                        <p>Mensaje</p>
-                        <textarea placeholder="Escribe tu mensaje aquí"></textarea>
-                    </div>
-                </div>
-                
-                <button type="submit" class="btn">Aceptar</button>
+
+                    <button type="submit" class="btn">Aceptar</button>
             </form>
         </div>
     </main>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -105,5 +111,69 @@
             </div>
         </div>
     </footer>
+
+    <script src="checkout.js"></script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AZ0EuQYNX65ZDLrEkDYVJu4xVvUsqiifuNUpCLu6JMdjONkkuInv6PJUn4i34nzGLJ5lBEkspmEuITSp&currency=USD"></script>
+    <script>
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: total.toFixed(2)  // total en USD
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    const pedido = {
+                        cliente: details.payer.name.given_name + " " + details.payer.name.surname,
+                        email: details.payer.email_address,
+                        productos: carrito,
+                        total: total,
+                        fecha: new Date().toISOString()
+                    };
+
+                    // Llama a la función que declaraste en el módulo de Firebase
+                    guardarPedidoEnFirebase(pedido);
+
+                    alert("Pago realizado por " + details.payer.name.given_name);
+                    localStorage.removeItem("carrito");
+                    window.location.href = "gracias.html";
+                });
+            }
+        }).render("#paypal-button-container");
+    </script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAuNctY2mqUZKvQlP8US7TWpJV5_Aj4Zzs",
+            authDomain: "ff-centrofitness.firebaseapp.com",
+            projectId: "ff-centrofitness",
+            storageBucket: "ff-centrofitness.firebasestorage.app",
+            messagingSenderId: "501372129487",
+            appId: "1:501372129487:web:8ef9ed0be21d4e2466a7ba",
+            measurementId: "G-W8B9L0BWBY"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        window.guardarPedidoEnFirebase = async function (pedido) {
+            try {
+                await addDoc(collection(db, "pedidos"), pedido);
+            } catch (e) {
+                console.error("Error al guardar pedido:", e);
+            }
+        };
+    </script>
 </body>
+
 </html>
