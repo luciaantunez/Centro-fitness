@@ -41,31 +41,11 @@
                     Atrás</a>
             </div>
             <form class="checkout-form">
-                <!-- <div class="card-details">
-                    <div class="card-fields">
-                        <p>Número de tarjeta</p>
-                        <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
-                        
-                        <p>Nombre del titular</p>
-                        <input type="text" placeholder="Nombre">
-                    </div>
-                    <div class="card-image">
-                        <img src="img/tarjeta.png" alt="Tarjeta">
-                    </div>
-                </div>
-                <div class="validation-fields">
-                    <div>
-                        <p>Validad</p>
-                        <input type="text" placeholder="mm/aa" maxlength="5">
-                    </div>
-                    <div>
-                        <p>Código de verificación</p>
-                        <input type="text" placeholder="CVV" maxlength="3">
-                    </div>
-                </div> -->
+
                 <div class="checkout">
 
                     <div id="paypal-button-container" style="margin-top: 2rem;"></div>
+                    <div id="paypal-uyu-button" style="margin-top: 2rem;"></div>
 
                     <h1>Datos de contacto</h1>
                     <hr class="separator">
@@ -114,66 +94,13 @@
 
     <script src="checkout.js"></script>
     <script
-        src="https://www.paypal.com/sdk/js?client-id=AZ0EuQYNX65ZDLrEkDYVJu4xVvUsqiifuNUpCLu6JMdjONkkuInv6PJUn4i34nzGLJ5lBEkspmEuITSp&currency=USD"></script>
-    <script>
-        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-        const total = carrito.reduce((sum, item) => sum + item.precio, 0);
-
-        paypal.Buttons({
-            createOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: total.toFixed(2)  // total en USD
-                        }
-                    }]
-                });
-            },
-            onApprove: function (data, actions) {
-                return actions.order.capture().then(function (details) {
-                    const pedido = {
-                        cliente: details.payer.name.given_name + " " + details.payer.name.surname,
-                        email: details.payer.email_address,
-                        productos: carrito,
-                        total: total,
-                        fecha: new Date().toISOString()
-                    };
-
-                    // Llama a la función que declaraste en el módulo de Firebase
-                    guardarPedidoEnFirebase(pedido);
-
-                    alert("Pago realizado por " + details.payer.name.given_name);
-                    localStorage.removeItem("carrito");
-                    window.location.href = "gracias.html";
-                });
-            }
-        }).render("#paypal-button-container");
-    </script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyAuNctY2mqUZKvQlP8US7TWpJV5_Aj4Zzs",
-            authDomain: "ff-centrofitness.firebaseapp.com",
-            projectId: "ff-centrofitness",
-            storageBucket: "ff-centrofitness.firebasestorage.app",
-            messagingSenderId: "501372129487",
-            appId: "1:501372129487:web:8ef9ed0be21d4e2466a7ba",
-            measurementId: "G-W8B9L0BWBY"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        window.guardarPedidoEnFirebase = async function (pedido) {
-            try {
-                await addDoc(collection(db, "pedidos"), pedido);
-            } catch (e) {
-                console.error("Error al guardar pedido:", e);
-            }
-        };
-    </script>
+        src="https://www.paypal.com/sdk/js?client-id=AZ0EuQYNX65ZDLrEkDYVJu4xVvUsqiifuNUpCLu6JMdjONkkuInv6PJUn4i34nzGLJ5lBEkspmEuITSp&currency=USD"data-sdk-integration-source="button-factory" data-namespace="paypalUSD">
+        </script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AZ0EuQYNX65ZDLrEkDYVJu4xVvUsqiifuNUpCLu6JMdjONkkuInv6PJUn4i34nzGLJ5lBEkspmEuITSp&currency=UYU"
+        data-sdk-integration-source="button-factory" data-namespace="paypalUYU">
+        </script>
+    <script type="module" src="firebase.js"></script>
 </body>
 
 </html>
