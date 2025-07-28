@@ -12,8 +12,8 @@
         rel="stylesheet">
 </head>
 
-<body id="carrito">
-    <header>
+<body >
+<header>
         <nav id="navbar" class="navbar">
             <a href="index.html#landing">
                 <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
@@ -22,38 +22,40 @@
                 <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
                     <i class="fa fa-bars"></i>
                 </a>
-                <a id="init-btn" href="index.html#landing">INICIO</a>
-                <a id="about-us-btn" href="index.html#about-us">NOSOTROS</a>
-                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
-                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
-                <a id="cart-btn">
+                <a id="cart-btn" href="carrito.html">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
+                <a id="asesorias-btn" href="asesoriaOnline.html">ASESORÍAS</a>
+                <a id="planes-btn" href="planesFitness.html">PLANES FITNESS</a>
+                <a id="about-us-btn" href="index.html#about-us">SOBRE MI</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <div class="cart-container">
-            
-            <div class="cart-header">
-                <h1 class="titulo">Carrito</h1>
-                <a href="#" class="back-link" onclick="history.back(); return false;"><i class="fas fa-arrow-left"></i> Atrás</a>
+    <main id="carrito">
+            <div class="cart-container">
+
+                <div class="cart-header">
+                    <h1 class="titulo">Carrito</h1>
+                    <a href="#" class="back-link" onclick="history.back(); return false;"><i
+                            class="fas fa-arrow-left"></i> Atrás</a>
+                </div>
+
+                <div class="cart-item" id="productosAgregados">
+                </div>
+
+                <div>
+                    <a href="#" id="totalCarrito"> </a>
+                </div>
+
+                <div class="checkout">
+                    <button class="btn" onclick="window.location.href='checkout.html'">Siguiente</button>
+                </div>
+
             </div>
-
-            <div class="cart-item" id="productosAgregados">
-            </div>
-
-            <div>
-                <a href="#" id="totalCarrito"> </a>
-            </div>
-
-            <div class="checkout">
-                <button class="btn" onclick="window.location.href='checkout.html'">Siguiente</button>
-            </div>
-
-        </div>
-
     </main>
 
     <!-- Footer -->
@@ -73,42 +75,7 @@
     </footer>
 
     <script src="nav.js"></script>
-    <script src="Carrito.js"></script>
-
-<!--     <script>
-        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-        const contenedor = document.getElementById("cart-container");
-
-        carrito.forEach(prod => {
-            const div = document.createElement("div");
-            div.innerHTML = `<h3>${prod.nombre}</h3><p>Precio: $${prod.precio}</p>`;
-            contenedor.appendChild(div);
-        });
-        </script> -->
-
-<!--     <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyAuNctY2mqUZKvQlP8US7TWpJV5_Aj4Zzs",
-            authDomain: "ff-centrofitness.firebaseapp.com",
-            projectId: "ff-centrofitness",
-            storageBucket: "ff-centrofitness.firebasestorage.app",
-            messagingSenderId: "501372129487",
-            appId: "1:501372129487:web:8ef9ed0be21d4e2466a7ba",
-            measurementId: "G-W8B9L0BWBY"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script> -->
+    <script src="carrito.js"></script>
 
 </body>
 

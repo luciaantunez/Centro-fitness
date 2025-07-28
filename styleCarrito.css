@@ -6,7 +6,6 @@ body {
 }
 
 body {
-    display: flex;
     flex-direction: column;
 }
 
@@ -32,8 +31,14 @@ main {
     gap: 1rem;
 }
 
-#carrito {
+
+ #carrito {
+    height: 100vh;
     background-image: url(img/fondoCarrito.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: auto; /* permite scroll si hay muchos productos */
 }
 
 .cart-header {

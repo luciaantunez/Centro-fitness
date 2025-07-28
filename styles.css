@@ -16,10 +16,9 @@ body {
 }
 
 #home {
-  background-image: url("img/fondoNuevo2.jpg");
+  background-image: url("img/FondoLanding.jpg");
   background-size: cover;
   background-position: 30% center;
-  /* Ajuste para centrar una parte específica de la imagen */
 }
 
 h1 {
@@ -332,7 +331,8 @@ p {
   justify-content: space-between;
   /* height: 100vh; */
   background-color: #0C0C0C;
-  padding: 10%;
+ /*  padding: 10%; */
+  padding: 10rem 10% 5rem 10%;
   gap: 2rem;
 }
 
@@ -382,7 +382,7 @@ p {
   background-color: #0C0C0C;
   color: #F4F9F2;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 10% 10rem 10%;
   
 }
 
@@ -403,7 +403,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 
 .benefit h3 {
@@ -424,14 +424,14 @@ p {
 .container {
   width: 100%;
   text-align: center;
-  margin-bottom: 10%;
 }
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: #0C0C0C;;
+  padding: 5rem 10% 5rem 10%;
 }
 .gallery img {
   width: 100%;
@@ -486,6 +486,7 @@ p {
   /* Centrar horizontalmente */
   width: 100%;
   /* Ajusta el ancho */
+  padding: 10rem 0rem;
   }
 
 /* Estilos para sobre nosotros */
@@ -891,6 +892,7 @@ p {
   align-items: center;
   justify-content: flex-end;
   height: 100vh;
+  padding: 5rem 10% 5rem 10%;
 }
 
 .gym-content {
@@ -915,8 +917,9 @@ p {
 
 .location {
   text-align: center;
-  padding: 50px 0px;
-  background-image: url(img/fondoGym2.jpg);
+  /* padding: 50px 0px; */
+  padding: 5rem 10% 5rem 10%;
+  background-image: url(img/fondoPesas.png);
   background-size: cover;
   background-attachment: fixed;
   color: white;
@@ -999,7 +1002,7 @@ p {
 /* Estilos de la sección de membresías */
 .membresias-section {
   text-align: center;
-  padding: 10% 5%;
+  padding: 5rem 10% 10rem 10%;
   background-color: #0C0C0C;
   color: white;
   
