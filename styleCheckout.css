@@ -197,3 +197,23 @@ body {
     }
 }
 
+/* Estilo para las pestañas de paypal */
+.currency-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.currency-tabs .tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.currency-tabs .tab.active {
+    background-color: #333;
+    color: white;
+}

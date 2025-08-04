@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- Header con barra de navegación. -->
     <header>
         <nav id="navbar" class="navbar">
             <a href="index.html#landing">
@@ -25,16 +24,15 @@
                 <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
                     <i class="fa fa-bars"></i>
                 </a>
-                <a id="init-btn" href="index.html#landing">INICIO</a>
-                <a id="about-us-btn" href="index.html#about-us">NOSOTROS</a>
-                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
-                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
-                <a id="cart-btn">
+                <a id="cart-btn" href="carrito.html">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                <!-- <a id="search-btn">
-                    <i class="fas fa-search"></i>
-                </a> -->
+                <a id="asesorias-btn" href="asesoriaOnline.html">ASESORÍAS</a>
+                <a id="planes-btn" href="planesFitness.html">PLANES FITNESS</a>
+                <a id="about-us-btn" href="index.html#about-us">SOBRE MI</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
             </div>
         </nav>
     </header>
@@ -44,30 +42,32 @@
 
         <!-- Sección de LandinGym -->
         <section class="gym-section">
-            <div class="gym-content margin-custom">
+            <div class="gym-content">
                 <h2> CONOCE NUESTRO <br> GIMNASIO</h2>
                 <p> Shangrilá - Ciudad de la costa</p>
             </div>
         </section>
 
-            
+
+        <!-- Sección Galería -->
+        <div class="container">
+            <div class="gallery" id="gallery">
+                <img src="img/g6.jpg" alt="Imagen 1" onclick="openModal(this)">
+                <img src="img/g1.jpg" alt="Imagen 2" onclick="openModal(this)">
+                <img src="img/espejo_y_pesas.jpg" alt="Imagen 3" onclick="openModal(this)">
+                <img src="img/g3.jpg" alt="Imagen 4" onclick="openModal(this)">
+                <img src="img/g4.jpg" alt="Imagen 5" onclick="openModal(this)">
+                <img src="img/g5.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g8.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g9.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g11.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g12.jpg" alt="Imagen 6" onclick="openModal(this)">
+            </div>
+        </div>
+
         <!-- Sección de Membresías -->
         <section class="membresias-section">
-            <div class="container">
-                <div class="gallery" id="gallery">
-                    <img src="img/g6.jpg" alt="Imagen 1" onclick="openModal(this)">
-                    <img src="img/g1.jpg" alt="Imagen 2" onclick="openModal(this)">
-                    <img src="img/espejo_y_pesas.jpg" alt="Imagen 3" onclick="openModal(this)">
-                    <img src="img/g3.jpg" alt="Imagen 4" onclick="openModal(this)">
-                    <img src="img/g4.jpg" alt="Imagen 5" onclick="openModal(this)">
-                    <img src="img/g5.jpg" alt="Imagen 6" onclick="openModal(this)">
-                    <img src="img/g8.jpg" alt="Imagen 6" onclick="openModal(this)">
-                    <img src="img/g9.jpg" alt="Imagen 6" onclick="openModal(this)">
-                    <img src="img/g11.jpg" alt="Imagen 6" onclick="openModal(this)">
-                    <img src="img/g12.jpg" alt="Imagen 6" onclick="openModal(this)">
-                </div>
-            </div>
-        
+
             <!-- Modal -->
             <div class="modal" id="modal" onclick="closeModal(event)">
                 <div class="modal-content" onclick="closeModal(event)">×</div>
@@ -86,7 +86,11 @@
                         <li><i class="fas fa-check"></i>Entrenamiento presencial semi personalizado </li>
                         <li><i class="fas fa-check"></i>Seguimiento online</li>
                     </ul>
-                    <button>INSCRIBIRME</button>
+                    <a href="https://wa.me/59891246076?text=Hola%21%20Estoy%20interesado%20en%20entrenar%20contigo%203%20veces%20por%20semana%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">
+                        <button>CONSULTAR</button>
+                    </a>
+
+
                 </div>
                 <div class="membresia-card">
                     <h3>4 VECES POR SEMANA</h3>
@@ -97,7 +101,9 @@
                         <li><i class="fas fa-check"></i>Entrenamiento presencial semi personalizado </li>
                         <li><i class="fas fa-check"></i>Seguimiento online</li>
                     </ul>
-                    <button>INSCRIBIRME</button>
+                    <a href="https://wa.me/59891246076?text=Hola%21%20Estoy%20interesado%20en%20entrenar%20contigo%204%20veces%20por%20semana%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">
+                        <button>CONSULTAR</button>
+                    </a>
                 </div>
             </div>
         </section>

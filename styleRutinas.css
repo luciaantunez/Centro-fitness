@@ -113,8 +113,8 @@
   color: #f4f9f2;
   font-family: "Inter";
   font-size: 1.1rem;
-  margin: 0% 10% 0% 10%;
-  padding-bottom: 40%;
+   margin: 0% 10% 0% 10%;
+  padding-bottom: 8%;
   text-align: center;
 }
 .container li {
@@ -150,8 +150,12 @@ h2 {
 
 /* Section: ¿Estás listo para empezar?  */
 .container2 {
-  height: 50vh;
+  height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  text-align: center;
   /* background-image: url("img/corriendo2.jpg"); 
   background-size: cover;
   background-position: 35% center;
@@ -160,7 +164,7 @@ h2 {
 .container2 p {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   margin-right: 1rem;
   text-align: right;
