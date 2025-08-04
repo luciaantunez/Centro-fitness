@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("cart-item");
 
         item.innerHTML = `
-<img src="${producto.imagen || 'img/carrito_ejemplo.jpeg'}" alt="${producto.nombre}">
+<a href="${producto.link || '#'}">
+  <img src="${producto.imagen || 'img/carrito_ejemplo.jpeg'}" alt="${producto.nombre}">
+</a>
 <div class="item-details">
     <p>${producto.nombre}</p>
 </div>
