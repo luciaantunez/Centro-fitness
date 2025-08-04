@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleRutinas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="navbar">
+            <a href="index.html#landing">
+                <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            </a>
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a id="cart-btn" href="carrito.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a id="asesorias-btn" href="asesoriaOnline.html">ASESORÍAS</a>
+                <a id="planes-btn" href="planesFitness.html">PLANES FITNESS</a>
+                <a id="about-us-btn" href="index.html#about-us">SOBRE MI</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+
+        <!-- Sección de LandinGym -->
+        <section class="gym-section">
+            <div class="gym-content">
+                <h2> CONOCE NUESTRO <br> GIMNASIO</h2>
+                <p> Shangrilá - Ciudad de la costa</p>
+            </div>
+        </section>
+
+
+        <!-- Sección Galería -->
+        <div class="container">
+            <div class="gallery" id="gallery">
+                <img src="img/g6.jpg" alt="Imagen 1" onclick="openModal(this)">
+                <img src="img/g1.jpg" alt="Imagen 2" onclick="openModal(this)">
+                <img src="img/espejo_y_pesas.jpg" alt="Imagen 3" onclick="openModal(this)">
+                <img src="img/g3.jpg" alt="Imagen 4" onclick="openModal(this)">
+                <img src="img/g4.jpg" alt="Imagen 5" onclick="openModal(this)">
+                <img src="img/g5.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g8.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g9.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g11.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <img src="img/g12.jpg" alt="Imagen 6" onclick="openModal(this)">
+            </div>
+        </div>
+
+        <!-- Sección de Membresías -->
+        <section class="membresias-section">
+
+            <!-- Modal -->
+            <div class="modal" id="modal" onclick="closeModal(event)">
+                <div class="modal-content" onclick="closeModal(event)">×</div>
+                <img id="modalImage" src="" alt="Imagen ampliada">
+            </div>
+
+
+            <h2>Pago mensual</h2>
+            <div class="membresias-container">
+                <div class="membresia-card">
+                    <h3>3 VECES POR SEMANA</h3>
+                    <div class="price">$ 1800</div>
+                    <div class="divider"></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Rutina personalizada</li>
+                        <li><i class="fas fa-check"></i>Entrenamiento presencial semi personalizado </li>
+                        <li><i class="fas fa-check"></i>Seguimiento online</li>
+                    </ul>
+                    <a href="https://wa.me/59891246076?text=Hola%21%20Estoy%20interesado%20en%20entrenar%20contigo%203%20veces%20por%20semana%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">
+                        <button>CONSULTAR</button>
+                    </a>
+
+
+                </div>
+                <div class="membresia-card">
+                    <h3>4 VECES POR SEMANA</h3>
+                    <div class="price">$ 2000</div>
+                    <div class="divider"></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Rutina personalizada</li>
+                        <li><i class="fas fa-check"></i>Entrenamiento presencial semi personalizado </li>
+                        <li><i class="fas fa-check"></i>Seguimiento online</li>
+                    </ul>
+                    <a href="https://wa.me/59891246076?text=Hola%21%20Estoy%20interesado%20en%20entrenar%20contigo%204%20veces%20por%20semana%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">
+                        <button>CONSULTAR</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección de Ubicación -->
+        <section class="location">
+            <div class="location-bg">
+                <h2>¿DÓNDE ENCONTRARNOS?</h2>
+                <div class="location-content">
+                    <div class="info">
+                        <div class="address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>
+                                Génova esquina Avenida Uruguay<br>
+                                Manzana 42, Solar 11.
+                            </p>
+                        </div>
+                        <div class="hours">
+                            <i class="fas fa-clock"></i>
+                            <p>
+                                Horarios:<br>
+                                <strong>Lunes a Viernes</strong> de 7 a.m. a 10 p.m.<br>
+                                <strong>Sábados</strong> de 9:30 a.m. a 11:30 a.m.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.2106868385486!2d-55.994637425248825!3d-34.85093307059445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89be072f3b0d%3A0x5bc551768866e554!2s42X5%2BJ5%2C%20Ciudad%20de%20la%20Costa%2C%20Departamento%20de%20Canelones!5e0!3m2!1ses-419!2suy!4v1719971281767!5m2!1ses-419!2suy"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Dirección</h3>
+                <p>Avenida Uruguay <br>Manzana 42, Solar 11.<br>Shangrilá</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +598 91 246 076</p>
+                <p><i class="fas fa-envelope"></i> francofungi15@gmail.com</p>
+                <p><i class="fa-brands fa-instagram"></i> ffcentrofitness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

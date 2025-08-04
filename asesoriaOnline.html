@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleRutinas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+        <nav id="navbar" class="navbar">
+            <a href="index.html#landing">
+                <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            </a>
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a id="cart-btn" href="carrito.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a id="asesorias-btn" href="asesoriaOnline.html">ASESORÍAS</a>
+                <a id="planes-btn" href="planesFitness.html">PLANES FITNESS</a>
+                <a id="about-us-btn" href="index.html#about-us">SOBRE MI</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <section class="info-section2">
+            <div class="titulo-con-boton"><h1 id="nombre" class="title">Asesorías Personalizadas</h1> 
+           <button id="btn-agregar-al-carrito" class="btn btn-solid"> Agregar al carrito</button></div>
+            <!-- ¿Buscas una transformación física verdaderamente adaptada a ti? -->
+            <div class="banner-container margin0">
+                <h2 class="white-text">¿Buscas una transformación física verdaderamente adaptada a ti?</h2>
+                <p class="banner-item">Nuestras asesorías personalizadas online son la solución ideal
+                    para quienes desean un seguimiento cercano y planes totalmente ajustados a sus necesidades
+                    y objetivos individuales.
+                </p>
+            </div>
+
+            <!-- Plan de Entrenamiento Personalizado -->
+            <div class="container">
+                <i class="fa-solid fa-person-running"></i>
+                <h2>Plan de Entrenamiento Personalizado</h2>
+                <p>Desarrollaremos una rutina de ejercicios específica para tus objetivos y necesidades,
+                    que se actualizará y adaptará de acuerdo con tu evolución. Cada ejercicio será
+                    seleccionado y ajustado para maximizar tus resultados.
+                </p>
+            </div>
+
+            <!-- Nutrición Adaptada a Ti -->
+            <div class="container">
+                <i class="fa-solid fa-utensils"></i>
+                <div>
+                    <h2>Nutrición Adaptada a Ti</h2>
+                    <p>A través de una evaluación detallada de tus hábitos alimenticios,
+                        te proporcionaré una guía nutricional hecha a tu medida, completa con recetas detalladas, para
+                        optimizar tu rendimiento y salud.
+                        Este plan no solo te indicará qué comer, sino también cuándo y cómo hacerlo para que se ajuste a
+                        tu estilo de vida.</p>
+                </div>
+            </div>
+
+            <!-- Videos Explicativos -->
+            <div class="container">
+                <i class="fa-brands fa-youtube"></i>
+                <div>
+                    <h2>Videos Explicativos</h2>
+                    <p>Accede a videos explicativos para cada ejercicio de tu rutina.
+                        Estos videos te guiarán paso a paso, asegurando que realices cada movimiento con
+                        la técnica adecuada para maximizar los resultados y minimizar el riesgo de lesiones.</p>
+                </div>
+            </div>
+
+            <!-- Seguimiento y Ajustes Continuos -->
+            <div class="container">
+                <i class="fa-solid fa-people-arrows"></i>
+                <div>
+                    <h2>Seguimiento y Ajustes Continuos</h2>
+                    <p>No estarás solo en este viaje.
+                        Realizaremos un seguimiento dos veces por semana para resolver cualquier duda que tengas y
+                        asegurar que progreses adecuadamente, realizando los ajustes
+                        necesarios a tu plan de entrenamiento y nutrición según tu evolución
+                        y feedback.</p>
+                </div>
+            </div>
+
+
+            <!-- Corrección de Técnica -->
+            <div class="container">
+                <i class="fa-solid fa-dumbbell"></i>
+                <div>
+                    <h2>Corrección de Técnica</h2>
+                    <p>Podrás enviar videos de tus ejercicios al entrenador, quien revisará tu técnica y
+                        te proporcionará comentarios detallados para que realices cada movimiento correctamente
+                        y de forma segura.</p>
+                </div>
+            </div>
+
+            <!-- Motivación -->
+            <div class="container">
+                <i class="fa-solid fa-heart"></i>
+                <div>
+                    <h2>Motivación</h2>
+                    <p>Recibirás motivación constante para mantenerte enfocado y comprometido con tus objetivos.
+                        Estaré contigo en cada paso del camino para asegurarnos de que te mantengas motivado
+                        y en el camino correcto hacia tus metas.</p>
+                </div>
+            </div>
+
+            <!-- Beneficios Exclusivos -->
+            <div class="container">
+                <i class="fa-solid fa-check"></i>
+                <div>
+                    <h2>Beneficios Exclusivos</h2>
+                    <ul>
+                        <li class="white-text"><strong class="green-text">Totalmente Personalizado</strong> :
+                            Cada plan es único, creado específicamente para ti.
+                            Desde los ejercicios hasta la nutrición, todo está diseñado teniendo en cuenta
+                            tus objetivos, preferencias y necesidades individuales.</li>
+
+                        <li class="white-text"><strong class="green-text">Comunicación Constante y Seguimiento</strong>
+                            :
+                            Disfruta de un contacto directo y regular con tu entrenador. La comunicación continua
+                            asegura
+                            que te mantengas en el camino correcto hacia tus objetivos, con revisiones y ajustes dos
+                            veces por semana.</li>
+
+                        <li class="white-text"><strong class="green-text">Transformación Integral</strong> : Estas
+                            asesorías no solo se enfocan en la apariencia física,
+                            sino también en mejorar tu bienestar general, energía y confianza.</li>
+
+                        <li class="white-text"><strong class="green-text">Flexibilidad y Comodidad</strong> : Entrena
+                            y sigue tu plan nutricional en el lugar y momento que prefieras,
+                            sin las limitaciones de los programas generales.
+                            Todo se ajusta a tu ritmo de vida.</li>
+
+                        <li class="white-text"><strong class="green-text">Resultados Reales y Comprobados</strong>:
+                            Elegir una asesoría personalizada es optar por una experiencia única y altamente efectiva.
+                            Si estás decidido a invertir en tu salud y transformación física con un enfoque detallado
+                            y específico, ¡este es el camino para ti!</li>
+                    </ul>
+                   <p id="dicePrecio">Sumate a nuestra comunidad virtual por .... US</p>
+                </div>
+            </div>
+
+            <!-- ¿Estás listo para empezar? -->
+            <div class="container2">
+                <div class="title2">
+                    <h1>¿Estás listo para empezar?</h1>
+                    <button id="btn-agregar-al-carrito" class="btn btn-solid"> Comprar</button>
+                    <a href="#" class="back-link-PyA" onclick="history.back(); return false;"><i
+                            class="fas fa-arrow-left"></i>Atrás</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Dirección</h3>
+                <p>Avenida Uruguay <br>Manzana 42, Solar 11.<br>Shangrilá</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +598 91 246 076</p>
+                <p><i class="fas fa-envelope"></i> francofungi15@gmail.com</p>
+                <p><i class="fa-brands fa-instagram"></i> ffcentrofitness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="carrito.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAuNctY2mqUZKvQlP8US7TWpJV5_Aj4Zzs",
+            authDomain: "ff-centrofitness.firebaseapp.com",
+            projectId: "ff-centrofitness",
+            storageBucket: "ff-centrofitness.firebasestorage.app",
+            messagingSenderId: "501372129487",
+            appId: "1:501372129487:web:8ef9ed0be21d4e2466a7ba",
+            measurementId: "G-W8B9L0BWBY"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // 📥 Función para leer un producto desde Firestore
+        async function cargarProducto() {
+            const docRef = doc(db, "productos", "producto1"); // nombre del documento
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                const datos = docSnap.data();
+                document.getElementById("nombre").textContent = datos.nombre;
+                document.getElementById("precio").textContent = `$${datos.precio}`;
+            } else {
+                console.log("No se encontró el producto.");
+            }
+        }
+
+        cargarProducto();
+    </script>
+
+    <script>
+        document.getElementById("btn-agregar-al-carrito").addEventListener("click", () => {
+            const producto = {
+                id: "asesoriaOnline",
+                nombre: "Asesoria Online",
+                precio: 1,
+                imagen: "img/EntrenamientoGuiadoOnline.png",
+            };
+
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push(producto);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            alert("Producto agregado al carrito");
+        });
+
+    </script>
+
+</body>
+
+</html>

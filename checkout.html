@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleCheckout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+<header>
+        <nav id="navbar" class="navbar">
+            <a href="index.html#landing">
+                <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            </a>
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a id="cart-btn" href="carrito.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a id="asesorias-btn" href="asesoriaOnline.html">ASESORÍAS</a>
+                <a id="planes-btn" href="planesFitness.html">PLANES FITNESS</a>
+                <a id="about-us-btn" href="index.html#about-us">SOBRE MI</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <h1>Checkout</h1>
+                <a href="#" class="back-link" onclick="history.back(); return false;"><i class="fas fa-arrow-left"></i>
+                    Atrás</a>
+            </div>
+            <form class="checkout-form">
+
+                <div class="checkout">
+
+                    <div id="total-a-pagar" class="total" style="color: rgb(255, 255, 255);">
+                         Total a pagar: <span id="total-monto" style="color: rgb(255, 255, 255);">--</span>
+                    </div>
+
+                  <!--   <div class="currency-tabs">
+                        <button id="btn-usd" class="tab active" onclick="showCurrency('usd')">USD</button>
+                        <button id="btn-uyu" class="tab" onclick="showCurrency('uyu')">UYU</button>
+                    </div> -->
+                    <div id="paypal-button-container" class="paypal-tab usd" style="margin-top: 2rem;"></div>
+                    <!-- <div id="paypal-uyu-button" class="paypal-tab uyu" style="margin-top: 2rem; display: none;"></div> -->
+                    <!-- <div id="paypal-button-container" style="margin-top: 2rem;"></div>
+                    <div id="paypal-uyu-button" style="margin-top: 2rem;"></div> -->
+
+                    <h1>Datos de contacto</h1>
+                    <hr class="separator">
+                    <div class="contact-fields">
+                        <div>
+                            <p>Nombre</p>
+                            <input type="text" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <p>Apellido</p>
+                            <input type="text" placeholder="Apellido">
+                        </div>
+                        <div class="full-width">
+                            <p>Email</p>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="full-width">
+                            <p>Teléfono</p>
+                            <input type="tel" placeholder="Teléfono">
+                        </div>
+                        <div class="full-width">
+                            <p>Mensaje</p>
+                            <textarea placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Aceptar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Dirección</h3>
+                <p>Avenida Uruguay <br>Manzana 42, Solar 11.<br>Shangrilá</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> 099 999 999</p>
+                <p><i class="fas fa-envelope"></i> gym@gmail.com</p>
+                <p><i class="fa-brands fa-instagram"></i> gym_insta</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="checkout.js"></script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AZ0EuQYNX65ZDLrEkDYVJu4xVvUsqiifuNUpCLu6JMdjONkkuInv6PJUn4i34nzGLJ5lBEkspmEuITSp&currency=USD"
+        data-sdk-integration-source="button-factory" data-namespace="paypalUSD">
+        </script>
+<!--     <script
+        src="https://www.paypal.com/sdk/js?client-id=AZ0EuQYNX65ZDLrEkDYVJu4xVvUsqiifuNUpCLu6JMdjONkkuInv6PJUn4i34nzGLJ5lBEkspmEuITSp&currency=UYU"
+        data-sdk-integration-source="button-factory" data-namespace="paypalUYU">
+        </script> -->
+    <script type="module" src="firebase.js"></script>
+</body>
+
+</html>

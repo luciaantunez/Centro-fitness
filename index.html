@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="home">
+<header>
+        <nav id="navbar" class="navbar">
+            <a href="index.html#landing">
+                <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            </a>
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a id="cart-btn" href="carrito.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a id="asesorias-btn" href="asesoriaOnline.html">ASESORÍAS</a>
+                <a id="planes-btn" href="planesFitness.html">PLANES FITNESS</a>
+                <a id="about-us-btn" href="index.html#about-us">SOBRE MI</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Landing -->
+        <section id="landing" class="landing">
+            <div class="landing-content margin-custom">
+                <h1> TU OBJETIVO <br> ES MI PRIORIDAD</h1>
+                <h2>FRANCO FUNGI ASESORIAS FITNESS ONLINE - ENTRENAMIENTO</h2>
+                <div class="buttons">
+                    <button class="btn btn-outline" onclick="location.href='planesFitness.html'">Planes fitness</button>
+                    <button class="btn btn-solid" onclick="location.href='asesoriaOnline.html'">Asesorías online</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección de Rutinas y Entrenamiento -->
+        <section id="asesoriasYplanes" class="split-section">
+            <div class="split left">
+                <div class="content text-left">
+                    <h2 class="text-left">PLANES <br> FITNESS</h2>
+                    <p class="white-text">Te proporcionaremos las herramientas y el conocimiento necesarios para transformar tu alimentación,
+                         tus hábitos y tu rutina de ejercicios de manera efectiva y sostenible. 
+                        Aprende a comer de manera inteligente con nuestra guía de ejercicio y alimentación, 
+                        y sigue nuestras rutinas diseñadas por expertos a través de videos explicativos. 
+                        <br><br>
+                        ¡Empieza hoy mismo tu camino hacia una mejor versión de ti!</p>
+                    <button class="btn btn-green-outline" onclick="location.href='planesFitness.html'">VER MÁS</button>
+                </div>
+            </div>
+            <div class="split right">
+                <div class="content text-left">
+                    <h2>ASSESORÍA <br> ONLINE</h2>
+                    <p class="white-text">La solución ideal para quienes desean un seguimiento cercano y 
+                        planes totalmente ajustados a sus necesidades y objetivos individuales. 
+                        <br>
+                        Descubre cómo podemos ayudarte a alcanzar tus metas con un plan de entrenamiento específico, 
+                        nutrición adaptada a ti, videos explicativos, seguimiento continuo y mucho más. 
+                        <br><br>
+                        ¡Empieza hoy mismo tu camino hacia una mejor versión de ti!</p>
+                    <button class="btn btn-green-outline" onclick="location.href='asesoriaOnline.html'">VER MÁS</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección ¿Por qué elegirnos? -->
+        <section id="why-choose-us" class="why-choose-us">
+            <h2 class="text-center"><span class="white-text">¿Por qué</span> <span class="green-text">elegirnos?</span>
+            </h2>
+            <p>Estamos comprometidos a ayudarte a lograr tus objetivos de manera efectiva y sostenible. ¡Elige lo mejor para tu bienestar!</p>
+            <div class="benefits">
+                <div class="benefit">
+                    <h3>Entrenamiento Personalizado</h3>
+                    <p>Logra tus objetivos de manera eficiente con planes de entrenamiento adaptados a tus necesidades y capacidades. Cada ejercicio se elige para maximizar tus resultados y progresar continuamente.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Equipamiento y Facilidades</h3>
+                    <p>Entrena con los equipos adecuados para cada grupo muscular y con instalaciones en constante mejoria. Nuestras facilidades están diseñadas para ofrecerte un entorno seguro y cómodo donde puedas concentrarte en tu progreso.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Información Nutricional</h3>
+                    <p>Transforma tu alimentación con guías detalladas y planes nutricionales adaptados a ti. Aprende a comer de manera inteligente para optimizar tu salud y rendimiento diario.</p>
+                </div>
+                <div class="benefit" id="benefitFinal">
+                    <h3>Asesorías Fitness</h3>
+                    <p>Recibe seguimiento y apoyo constante para alcanzar tus metas fitness. Nuestras asesorías te proporcionan la motivación y el conocimiento necesario para mantenerte enfocado y comprometido.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- separador -->
+        <section>
+            <div class="separador"></div>
+        </section>
+
+        <!-- Sobre Mi -->
+        <section id="about-us" class="split-section about-us">
+            <div class="about-us-content">
+                <h2 class="text-justify">SOBRE Mi</h2>
+                <p class="text-left">Hola, mi nombre es Franco Fungi, cuento con 5 años de experiencia como entrenador personal.
+                    Me certifique como Entrenador de Musculación por Enade (Escuela nacional de entrenadores), y como Entrenador Personal por el Instituto y gimnasio Forma.
+                    Además, cuento con un master en Nutrición Deportiva de TECH (Universidad Tecnológica de España).</p>
+                <p class="text-left">Hoy en día soy el dueño de un gimnasio con un enfoque semi-personalizado y dedico mi vida a ayudar a las personas con entrenamientos y hábitos saludables para alcanzar su mejor versión física, y apuntando siempre a mejorar la salud con una buena alimentación.</p>
+                <p class="text-left">Mi enfoque se basa en planificaciones personalizadas, pero también en conectar a nivel humano con mis alumnos y juntos poder progresar superando los objetivos que nos propongamos.</p>
+            </div>
+            <div class="about-us-image">
+                <img src="img/sobre_mi.png" alt="perfil" class="max-width90">
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <!-- <section class="testimonials">
+            <h2>¿QUÉ <span class="highlight">DICEN LOS CLIENTES</span> SOBRE NOSOTROS?</h2>
+
+            <div class="testimonial-container">
+                <i class="fa fa-chevron-left"></i> -->
+
+                <!-- Testimonio 1 -->
+                <!-- <div class="testimonial">
+                    <div class="image-container" onclick="toggleImage(this)">
+                        <img src="img/GONZALO_GONZALEZ_1.png" alt="Before Image" class="before">
+                        <img src="img/GONZALO_GONZALEZ_2.png" alt="After Image" class="after">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>Franco es un entrenador increíble. Sus rutinas personalizadas me han ayudado a mejorar mi
+                            forma física rápidamente, y su guía constante durante los entrenamientos me asegura que
+                            siempre hago los ejercicios correctamente. ¡Totalmente recomendado!</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Testimonio 2 -->
+                <!-- <div class="testimonial">
+                    <div class="image-container" onclick="toggleImage(this)">
+                        <img src="img/María_Martinez_1.png" alt="Before Image" class="before">
+                        <img src="img/María_Martinez_2.png" alt="After Image" class="after">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>El programa de entrenamiento de Franco es excelente. Me ha ayudado a alcanzar mis objetivos
+                            de fitness de una manera eficiente y segura. Sus consejos y seguimiento constante han sido
+                            clave en mi progreso. ¡Muy recomendado!</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Testimonio 3 -->
+                <!-- <div class="testimonial">
+                    <div class="image-container" onclick="toggleImage(this)">
+                        <img src="img/CARLOS_LOPEZ_1.png" alt="Before Image" class="before">
+                        <img src="img/CARLOS_LOPEZ_2.png" alt="After Image" class="after">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>Gracias a Franco, he logrado resultados increíbles en poco tiempo. Su enfoque personalizado y
+                            su conocimiento profundo en fitness han sido fundamentales para mi transformación.
+                            Recomiendo sus servicios a todos los que quieran mejorar su salud y forma física.</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div> -->
+
+            <!--     <i class="fa fa-chevron-right"></i>
+            </div>
+
+            <div class="pagination">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section> -->
+
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2 class="text-left ">Contactanos</h2>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group" action="send_email.php" method="post">
+                            <label for="first-name">Nombre</label>
+                            <input type="text" id="first-name" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Apellido</label>
+                            <input type="text" id="last-name" placeholder="Apellido" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="tu-correo@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tu mensaje</label>
+                        <textarea id="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/ffcentrofitness" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/59891246076" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:francofungi15@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Dirección</h3>
+                <p>Avenida Uruguay <br>Manzana 42, Solar 11.<br>Shangrilá</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +598 91 246 076</p>
+                <p><i class="fas fa-envelope"></i> francofungi15@gmail.com</p>
+                <p><i class="fa-brands fa-instagram"></i> ffcentrofitness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+</body>
+
+</html>

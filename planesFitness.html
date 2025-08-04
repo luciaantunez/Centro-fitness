@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleRutinas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+        <nav id="navbar" class="navbar">
+            <a href="index.html#landing">
+                <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
+            </a>
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a id="cart-btn" href="carrito.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a id="asesorias-btn" href="asesoriaOnline.html">ASESORÍAS</a>
+                <a id="planes-btn" href="planesFitness.html">PLANES FITNESS</a>
+                <a id="about-us-btn" href="index.html#about-us">SOBRE MI</a>
+                <a id="gym-btn" href="gimnasio.html">GIMNASIO</a>
+                <a id="contact-btn" href="index.html#contact">CONTACTO</a>
+                <a id="init-btn" href="index.html#landing">INICIO</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <section class="info-section">
+            <div class="titulo-con-boton"><h1 id="nombre" class="title">Planes Fitness</h1> 
+           <button id="btn-agregar-al-carrito" class="btn btn-solid"> Agregar al carrito</button></div>
+            
+
+            <!-- ¿Estás listo para alcanzar tu mejor versión? -->
+            <div class="banner-container margin0">
+                <h2 class="white-text">¿Estás listo para alcanzar tu mejor versión?</h2>
+                <p class="banner-item">Con nuestros exclusivos planes fitness, te proporcionaremos las herramientas
+                    y el conocimiento
+                    necesarios
+                    para transformar tu alimentación, tus hábitos y tu rutina de ejercicios de manera efectiva y
+                    sostenible.
+                </p>
+            </div>
+
+            <!-- Guía de Ejercicio y Alimentación -->
+            <div class="container">
+                <i class="fas fa-book-open"></i>
+                <h2>Guía de Ejercicio y Alimentación</h2>
+                <p>A través de un detallado PDF, te revelaremos las claves esenciales para
+                    que tu alimentación y hábitos sean perfectamente alineados con tus objetivos físicos.
+                    Aprende a comer de manera inteligente y descubre los hábitos que potenciarán tu bienestar
+                    y energía diaria. Esta guía no solo te enseñará qué comer, sino también cuándo y cómo,
+                    adaptándose a tu estilo de vida único.
+                </p>
+            </div>
+
+            <!-- Videos Explicativos -->
+            <div class="container">
+                <i class="fa-brands fa-youtube"></i>
+                <div>
+                    <h2>Videos Explicativos</h2>
+                    <p>No importa si prefieres entrenar en casa o en el gimnasio, nuestros videos explicativos te
+                        presentarán
+                        una amplia variedad de rutinas de ejercicios diseñadas por expertos. Cada video está pensado
+                        para
+                        guiarte paso a paso, asegurándote de que realices cada movimiento con la técnica adecuada para
+                        maximizar
+                        los resultados y minimizar el riesgo de lesiones.</p>
+                </div>
+            </div>
+
+            <!-- Beneficios Exclusivos -->
+            <div class="container">
+                <i class="fa-solid fa-check"></i>
+                <div>
+                    <h2>Beneficios Exclusivos</h2>
+                    <ul>
+                        <li class="white-text"><strong class="green-text">Resultados Comprobados</strong> : Nuestros
+                            planes están diseñados por un
+                            profesional con años
+                            de experiencia y han ayudado a muchas personas a alcanzar sus metas.</li>
+                        <li class="white-text"><strong class="green-text">Flexibilidad y Comodidad</strong>: Entrena a
+                            tu propio ritmo y en el
+                            lugar que más te
+                            convenga, sin necesidad de equipos costosos.</li>
+                        <li class="white-text"><strong class="green-text">Asequibilidad</strong>: Obtén acceso a una
+                            guía completa y rutinas
+                            efectivas a un costo
+                            accesible.</li>
+                    </ul>
+ 
+                    <p id="dicePrecio">Puedes conseguir tu plan personalizado por .... US</p>
+                </div>
+            </div>
+
+            <!-- ¿Estás listo para empezar? -->
+            <div class="container2">
+                <div class="title2">
+                    <h1>¿Estás listo para empezar?</h1>
+                    
+                    <button id="btn-agregar-al-carrito" class="btn btn-solid"> Comprar</button>
+                    <a href="#" class="back-link-PyA" onclick="history.back(); return false;"><i
+                            class="fas fa-arrow-left"></i>Atrás</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Dirección</h3>
+                <p>Avenida Uruguay <br>Manzana 42, Solar 11.<br>Shangrilá</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +598 91 246 076</p>
+                <p><i class="fas fa-envelope"></i> francofungi15@gmail.com</p>
+                <p><i class="fa-brands fa-instagram"></i> ffcentrofitness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="carrito.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAuNctY2mqUZKvQlP8US7TWpJV5_Aj4Zzs",
+            authDomain: "ff-centrofitness.firebaseapp.com",
+            projectId: "ff-centrofitness",
+            storageBucket: "ff-centrofitness.firebasestorage.app",
+            messagingSenderId: "501372129487",
+            appId: "1:501372129487:web:8ef9ed0be21d4e2466a7ba",
+            measurementId: "G-W8B9L0BWBY"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <script src="carrito.js"></script>
+
+    <script>
+        document.getElementById("btn-agregar-al-carrito").addEventListener("click", () => {
+            const producto = {
+                id: "planFitness",
+                nombre: "Plan Fitness",
+                precio: 1,
+                imagen: "img/Run.png",
+            };
+
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push(producto);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            alert("Producto agregado al carrito");
+        });
+    </script>
+
+</body>
+
+</html>

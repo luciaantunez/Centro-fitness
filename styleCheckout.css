@@ -1,0 +1,219 @@
+body {
+    background-image: url('img/fondoCheckout.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+}
+
+.checkout-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #32B70D;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 10% auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #32B70D;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.checkout-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #32B70D;
+}
+
+.back-link {
+    font-family: 'Inter', sans-serif;
+    color: #32B70D;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-form p {
+    color: #f4f9f2;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+.checkout-form h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    color: #32B70D;
+    margin-top: 30px;
+}
+
+.checkout-form .separator {
+    border: 0;
+    height: 1px;
+    background: #32B70D;
+    margin: 10px 0;
+}
+
+.checkout-form input, 
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #32B70D;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #FFF;
+    box-sizing: border-box;
+}
+
+.checkout-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-fields div {
+    flex: 1 1 calc(50% - 10px);
+}
+
+.contact-fields div.full-width {
+    flex: 1 1 100%;
+}
+
+.checkout-form .btn {
+    background-color: #32B70D;
+    color: #f4f9f2;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto; /* Alinea el botón a la derecha */
+}
+
+@media (max-width: 768px) {
+    .checkout-container {
+        width: 90%;
+        margin: 15% auto;
+    }
+
+    .contact-fields {
+        flex-direction: column;
+    }
+
+    .checkout-form .btn {
+        width: 100%; /* Full width in small screens */
+    }
+}
+
+/* Ajustes para los campos de validez y código de verificación */
+.validation-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.validation-fields div {
+    flex: 1 1 calc(50% - 10px);
+}
+
+@media (max-width: 480px) {
+    .checkout-container {
+        width: 90%;
+        margin: 20% auto;
+        padding: 5%;
+    }
+
+    .contact-fields {
+        flex-direction: column;
+    }
+
+    .validation-fields {
+        flex-direction: column;
+    }
+
+    .checkout-form .btn {
+        width: 100%; /* Full width in small screens */
+    }
+}
+
+/* Estilo para la imagen de la tarjeta */
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Cambiar flex-start a center para centrar verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+}
+
+
+.card-fields {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.card-image {
+    /* width: 150px; */
+    width: 50%;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 480px) {
+    .card-details {
+        flex-direction: column;
+    }
+
+    .card-fields, .card-image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .card-image {
+        text-align: center;
+    }
+
+    .card-image img {
+        display: inline-block;
+    }
+}
+
+/* Estilo para las pestañas de paypal */
+.currency-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.currency-tabs .tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.currency-tabs .tab.active {
+    background-color: #333;
+    color: white;
+}
