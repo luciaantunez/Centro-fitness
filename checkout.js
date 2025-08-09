@@ -1,26 +1,32 @@
-// checkout.js
 import { guardarPedidoEnFirebase, obtenerProductosDesdeFirestore } from "./firebase.js";
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let total = 0;
+let totalGlobal = 0;  // guardamos total global para usar en modal y PayPal
+let customId = null;
+
+// Referencias DOM
+const formulario = document.getElementById('formulario-asesoria');
+const modal = document.getElementById('paypalModal');
+const modalClose = document.getElementById('modalClose');
+const resumenPago = document.getElementById('resumenPago');
+const paypalContainerModal = document.getElementById('paypal-button-container-modal');
 
 // Calcula el total usando precios reales desde Firestore
 async function calcularTotalDesdeFirestore() {
   try {
     const productosFirebase = await obtenerProductosDesdeFirestore();
-    total = 0;
+    totalGlobal = 0;
 
     carrito.forEach(item => {
       const producto = productosFirebase.find(p => p.nombre === item.nombre);
       if (producto) {
-        total += producto.precio;
+        totalGlobal += producto.precio;
       } else {
         console.warn(`Producto no encontrado en Firestore: ${item.nombre}`);
       }
     });
 
-    mostrarTotalEnPantalla(total);
-    inicializarBotonesPaypal(total);
+    mostrarTotalEnPantalla(totalGlobal);
   } catch (error) {
     console.error("Error al calcular total:", error);
   }
@@ -34,38 +40,94 @@ function mostrarTotalEnPantalla(total) {
   }
 }
 
-// Inicializa los botones de PayPal con el total calculado
-function inicializarBotonesPaypal(total) {
-  paypalUSD.Buttons({
-    createOrder: (data, actions) => {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: total.toFixed(2)
-          }
-        }]
-      });
-    },
-    onApprove: async (data, actions) => {
-      const details = await actions.order.capture();
-      const pedido = {
-        cliente: details.payer.name.given_name + " " + details.payer.name.surname,
-        email: details.payer.email_address,
-        productos: carrito,
-        total: total,
-        fecha: new Date().toISOString()
-      };
+// Maneja el submit del formulario, valida y muestra modal con PayPal
+formulario.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-      await guardarPedidoEnFirebase(pedido);
-      alert("Pago exitoso, gracias " + details.payer.name.given_name);
-      localStorage.removeItem("carrito");
-      window.location.href = "gracias.html";
-    }
-  }).render("#paypal-button-container");
-}
+  if (!formulario.checkValidity()) {
+    formulario.reportValidity();
+    return;
+  }
 
-// Al cargar la página, lee el carrito y calcula el total
-document.addEventListener("DOMContentLoaded", () => {
+  // Leer datos del formulario
+  const nombre = formulario.querySelector('#nombre').value.trim();
+  const apellido = formulario.querySelector('#apellido').value.trim();
+  const email = formulario.querySelector('#email').value.trim();
+  const telefono = formulario.querySelector('#telefono').value.trim();
+  const mensaje = formulario.querySelector('#mensaje').value.trim();
+
+  // Generar customId para identificar pedido
+  customId = (crypto && crypto.randomUUID) ? crypto.randomUUID() : 'id-' + Date.now();
+
+  // Guardar datos en backend (Firebase Function)
+  try {
+    const res = await fetch('https://us-central1-TU_PROYECTO.cloudfunctions.net/guardarFormulario', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ customId, nombre, apellido, email, telefono, mensaje })
+    });
+    if (!res.ok) throw new Error(await res.text());
+  } catch (err) {
+    alert('Error guardando datos: ' + err.message);
+    return;
+  }
+
+  // Mostrar resumen en el modal
+  resumenPago.innerHTML = `
+    <p><strong>Nombre:</strong> ${nombre} ${apellido}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Teléfono:</strong> ${telefono}</p>
+    <p><strong>Mensaje:</strong> ${mensaje || 'No proporcionado'}</p>
+    <p><strong>Monto a pagar:</strong> $${totalGlobal.toFixed(2)} USD</p>
+  `;
+
+  // Mostrar modal
+  modal.style.display = 'flex';
+
+  // Renderizar botón PayPal si no está renderizado
+  if (!paypalContainerModal.hasChildNodes()) {
+    paypal.Buttons({
+      createOrder: (data, actions) => {
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: totalGlobal.toFixed(2) },
+            custom_id: customId
+          }]
+        });
+      },
+      onApprove: async (data, actions) => {
+        const details = await actions.order.capture();
+
+        // Notificar a entrenador y guardar pedido con datos de pago
+        await fetch('https://us-central1-TU_PROYECTO.cloudfunctions.net/notifyEntrenador', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            orderID: data.orderID,
+            payer: details.payer,
+            customId
+          })
+        });
+
+        modal.style.display = 'none';
+        alert('Pago confirmado. Gracias por tu compra.');
+        localStorage.removeItem('carrito');
+        window.location.href = '/gracias.html';
+      },
+      onError: (err) => {
+        alert('Error procesando el pago. Por favor, intenta nuevamente.');
+        console.error(err);
+      }
+    }).render('#paypal-button-container-modal');
+  }
+});
+
+// Eventos para cerrar modal
+modalClose.onclick = () => { modal.style.display = 'none'; };
+window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+// Al cargar la página, calcular total
+document.addEventListener('DOMContentLoaded', () => {
   carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   calcularTotalDesdeFirestore();
 });

@@ -12,8 +12,20 @@
         rel="stylesheet">
 </head>
 
+<!-- Modal PayPal-->
+<div id="paypalModal" class="modal" style="display:none;">
+  <div class="modal-content" style="max-width:400px; margin: auto; padding: 20px; background: #fff; border-radius:8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); position: relative;">
+    <span id="modalClose" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:24px;">&times;</span>
+    <h2>Confirmá tu pago</h2>
+    <div id="resumenPago" style="margin-bottom: 1rem;"></div>
+    <div id="paypal-button-container-modal"></div>
+  </div>
+  <div class="modal-backdrop" style="position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
+</div>
+
+
 <body>
-<header>
+    <header>
         <nav id="navbar" class="navbar">
             <a href="index.html#landing">
                 <img class="logo" src="img/logo.png" alt="Logo del Gimnasio">
@@ -42,43 +54,88 @@
                 <a href="#" class="back-link" onclick="history.back(); return false;"><i class="fas fa-arrow-left"></i>
                     Atrás</a>
             </div>
-            <form class="checkout-form">
+            <!-- <form class="checkout-form">
 
                 <div class="checkout">
 
                     <div id="total-a-pagar" class="total" style="color: rgb(255, 255, 255);">
-                         Total a pagar: <span id="total-monto" style="color: rgb(255, 255, 255);">--</span>
+                        Total a pagar: <span id="total-monto" style="color: rgb(255, 255, 255);">--</span>
                     </div>
 
-                    <div id="paypal-button-container" class="paypal-tab usd" style="margin-top: 2rem;"></div>
+                    <div id="paypal-button-container" class="paypal-tab usd" style="margin-top: 2rem; display:none;">
+                    </div>
+
 
                     <h1>Datos de contacto</h1>
                     <hr class="separator">
                     <div class="contact-fields">
                         <div>
                             <p>Nombre</p>
-                            <input type="text" placeholder="Nombre">
+                            <input id="nombre" name="nombre" type="text" placeholder="Nombre" required
+                                pattern="[A-Za-zÀ-ÿ\s]{2,}">
                         </div>
                         <div>
                             <p>Apellido</p>
-                            <input type="text" placeholder="Apellido">
+                            <input id="apellido" name="apellido" type="text" placeholder="Apellido" required
+                                pattern="[A-Za-zÀ-ÿ\s]{2,}">
                         </div>
                         <div class="full-width">
                             <p>Email</p>
-                            <input type="email" placeholder="Email">
+                            <input id="email" name="email" type="email" placeholder="Email" required>
                         </div>
                         <div class="full-width">
                             <p>Teléfono</p>
-                            <input type="tel" placeholder="Teléfono">
+                            <input id="telefono" name="telefono" type="tel" placeholder="Teléfono" required
+                                pattern="[\d\s\+\-]{7,15}">
                         </div>
                         <div class="full-width">
                             <p>Mensaje</p>
-                            <textarea placeholder="Escribe tu mensaje aquí"></textarea>
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí"
+                                rows="4"></textarea>
                         </div>
                     </div>
 
-                    <button type="submit" class="btn">Aceptar</button>
+                    <button type="submit" class="btn">Siguiente</button>
+            </form> -->
+
+            <form id="formulario-asesoria" class="checkout-form" novalidate>
+
+                <div class="checkout">
+
+                    <div id="total-a-pagar" class="total" style="color: rgb(255, 255, 255);">
+                        Total a pagar: <span id="total-monto" style="color: rgb(255, 255, 255);">--</span>
+                    </div>
+
+                    <h1>Datos de contacto</h1>
+                    <hr class="separator">
+                    <div class="contact-fields">
+                        <div>
+                            <p>Nombre <span style="color:red">*</span></p>
+                            <input type="text" id="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div>
+                            <p>Apellido <span style="color:red">*</span></p>
+                            <input type="text" id="apellido" placeholder="Apellido" required>
+                        </div>
+                        <div class="full-width">
+                            <p>Email</p>
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="full-width">
+                            <p>Teléfono <span style="color:red">*</span></p>
+                            <input type="tel" id="telefono" placeholder="Teléfono" required>
+                        </div>
+                        <div class="full-width">
+                            <p>Mensaje</p>
+                            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Siguiente</button>
+                </div>
             </form>
+
+
         </div>
     </main>
 
@@ -103,13 +160,13 @@
         data-sdk-integration-source="button-factory" data-namespace="paypalUSD">
         </script>
 
-        <!--     <script
+    <!--     <script
         src="https://www.paypal.com/sdk/js?client-id=AZ0EuQYNX65ZDLrEkDYVJu4xVvUsqiifuNUpCLu6JMdjONkkuInv6PJUn4i34nzGLJ5lBEkspmEuITSp&currency=UYU"
         data-sdk-integration-source="button-factory" data-namespace="paypalUYU">
         </script> -->
-        
+
     <script type="module" src="firebase.js"></script>
-    
+
 </body>
 
 </html>
